@@ -83,10 +83,22 @@ function addLine(flightPlanCoordinates, map) {
 function addMarker(location, map) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
+  var image = {
+    // url: "https://image.flaticon.com/icons/png/128/179/179386.png",
+    // url: "https://image.flaticon.com/icons/png/128/497/497738.png",
+    url: "images/warning.png",
+    // This marker is 20 pixels wide by 32 pixels high.
+    scaledSize: new google.maps.Size(30, 30),
+    // // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(15, 30)
+  }
   var marker = new google.maps.Marker({
     position: location,
-    label: labels[labelIndex++ % labels.length],
-    map: map
+    // label: labels[labelIndex++ % labels.length],
+    map: map,
+    icon: image
   });
   addInfoWindow(
     "Incident: SeattleTanker, \
