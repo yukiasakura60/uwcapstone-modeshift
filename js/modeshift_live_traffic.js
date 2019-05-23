@@ -48,8 +48,13 @@ function initMap() {
     {lat: 47.589951, lng: -122.285939},
     {lat: 47.589268, lng: -122.254213}
   ];
-  addLine(flightPlanCoordinates, map);
-  addLine(flightPlanCoordinates2, map);
+  var flightPlanCoordinates3 = [
+    {lat: 47.589268, lng: -122.254213},
+    {lat: 47.589951, lng: -122.285939}
+    
+  ];
+  addLine(flightPlanCoordinates, map, '#FF0000');
+  addLine(flightPlanCoordinates2, map, '#FF0000');
   addCircle(center, 3000, map);
   addMarker(center, map);
 }
@@ -68,11 +73,11 @@ function addCircle(center, radius, map) {
   });
 }
 
-function addLine(flightPlanCoordinates, map) {
+function addLine(flightPlanCoordinates, map, color) {
   var flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
     geodesic: true,
-    strokeColor: '#FF0000',
+    strokeColor: color,
     strokeOpacity: 1.0,
     strokeWeight: 5
   });
