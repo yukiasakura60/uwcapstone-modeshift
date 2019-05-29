@@ -7933,7 +7933,136 @@ Webflow.require('ix2').init({
                 "effectIn": null
             },
             "createdOn": 1558484087071
+        }, // added
+        "e-15": {
+            "id": "e-15",
+            "eventTypeId": "MOUSE_CLICK",
+            "action": {
+                "id": "",
+                "actionTypeId": "GENERAL_START_ACTION",
+                "config": {
+                    "delay": 0,
+                    "easing": "",
+                    "duration": 0,
+                    "actionListId": "a-5",
+                    "affectedElements": {},
+                    "playInReverse": false,
+                    "autoStopEventId": "e-16"
+                }
+            },
+            "mediaQueries": ["main", "medium", "small", "tiny"],
+            "target": {
+                "appliesTo": "ELEMENT",
+                "styleBlockIds": [],
+                "id": "5cbd60c1fad96c817f9b50d5|4feb02e8-a238-1d4f-926f-1156191fab1e"
+            },
+            "config": {
+                "loop": false,
+                "scrollOffsetValue": null,
+                "scrollOffsetUnit": null,
+                "delay": null,
+                "direction": null,
+                "effectIn": null
+            },
+            "createdOn": 1558551343639
+        },
+        "e-16": {
+            "id": "e-16",
+            "eventTypeId": "MOUSE_SECOND_CLICK",
+            "action": {
+                "id": "",
+                "actionTypeId": "GENERAL_START_ACTION",
+                "config": {
+                    "delay": 0,
+                    "easing": "",
+                    "duration": 0,
+                    "actionListId": "a-6",
+                    "affectedElements": {},
+                    "playInReverse": false,
+                    "autoStopEventId": "e-15"
+                }
+            },
+            "mediaQueries": ["main", "medium", "small", "tiny"],
+            "target": {
+                "appliesTo": "ELEMENT",
+                "styleBlockIds": [],
+                "id": "5cbd60c1fad96c817f9b50d5|4feb02e8-a238-1d4f-926f-1156191fab1e"
+            },
+            "config": {
+                "loop": false,
+                "scrollOffsetValue": null,
+                "scrollOffsetUnit": null,
+                "delay": null,
+                "direction": null,
+                "effectIn": null
+            },
+            "createdOn": 1558551343640
+        },
+        "e-17": {
+            "id": "e-17",
+            "eventTypeId": "MOUSE_CLICK",
+            "action": {
+                "id": "",
+                "actionTypeId": "GENERAL_START_ACTION",
+                "config": {
+                    "delay": 0,
+                    "easing": "",
+                    "duration": 0,
+                    "actionListId": "a-7",
+                    "affectedElements": {},
+                    "playInReverse": false,
+                    "autoStopEventId": "e-18"
+                }
+            },
+            "mediaQueries": ["main", "medium", "small", "tiny"],
+            "target": {
+                "appliesTo": "ELEMENT",
+                "styleBlockIds": [],
+                "id": "5cbd60c1fad96c817f9b50d5|c32ea523-7c68-4c91-16d1-fd999c38735f"
+            },
+            "config": {
+                "loop": false,
+                "scrollOffsetValue": null,
+                "scrollOffsetUnit": null,
+                "delay": null,
+                "direction": null,
+                "effectIn": null
+            },
+            "createdOn": 1558736412589
+        },
+        "e-19": {
+            "id": "e-19",
+            "eventTypeId": "MOUSE_CLICK",
+            "action": {
+                "id": "",
+                "actionTypeId": "GENERAL_START_ACTION",
+                "config": {
+                    "delay": 0,
+                    "easing": "",
+                    "duration": 0,
+                    "actionListId": "a-8",
+                    "affectedElements": {},
+                    "playInReverse": false,
+                    "autoStopEventId": "e-20"
+                }
+            },
+            "mediaQueries": ["main", "medium", "small", "tiny"],
+            "target": {
+                "appliesTo": "ELEMENT",
+                "styleBlockIds": [],
+                "id": "5cbd60c1fad96c817f9b50d5|b575b126-78cd-0e1e-d4e4-35acfb862699"
+            },
+            "config": {
+                "loop": false,
+                "scrollOffsetValue": null,
+                "scrollOffsetUnit": null,
+                "delay": null,
+                "direction": null,
+                "effectIn": null
+            },
+            "createdOn": 1558737267995
         }
+
     },
     "actionLists": {
         "a": {
@@ -8511,6 +8640,273 @@ Webflow.require('ix2').init({
             }],
             "createdOn": 1556733539849,
             "useFirstGroupAsInitialState": false
+        }, // added
+        "a-5": {
+            "id": "a-5",
+            "title": "Show routes",
+            "actionItemGroups": [{
+                "actionItems": [{
+                    "id": "a-5-n",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "selector": ".empty-state-text",
+                            "selectorGuids": ["9831d9ec-93d0-9fb2-35a4-e05419b314aa"]
+                        }
+                    }
+                }]
+            }, {
+                "actionItems": [{
+                    "id": "a-5-n-2",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "flex",
+                        "target": {
+                            "id": "5cbd60c1fad96c817f9b50d5|05d575aa-7bfd-d4fc-0507-399c73f59cd5"
+                        }
+                    }
+                }]
+            }, {
+                "actionItems": [{
+                    "id": "a-5-n-3",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "block",
+                        "target": {
+                            "selector": ".routes",
+                            "selectorGuids": ["83e986b2-426c-10ba-78a3-582b9fafcdba"]
+                        }
+                    }
+                }]
+            }],
+            "createdOn": 1558551353024,
+            "useFirstGroupAsInitialState": false
+        },
+        "a-6": {
+            "id": "a-6",
+            "title": "Hide routes",
+            "actionItemGroups": [{
+                "actionItems": [{
+                    "id": "a-6-n",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "selector": ".announcement",
+                            "selectorGuids": ["9ae11f81-6c80-66ae-6ffa-3fc7cdef9160"]
+                        }
+                    }
+                }]
+            }, {
+                "actionItems": [{
+                    "id": "a-6-n-2",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "selector": ".routes",
+                            "selectorGuids": ["83e986b2-426c-10ba-78a3-582b9fafcdba"]
+                        }
+                    }
+                }]
+            }, {
+                "actionItems": [{
+                    "id": "a-6-n-3",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "block",
+                        "target": {
+                            "selector": ".empty-state-text",
+                            "selectorGuids": ["9831d9ec-93d0-9fb2-35a4-e05419b314aa"]
+                        }
+                    }
+                }]
+            }],
+            "createdOn": 1558552307963,
+            "useFirstGroupAsInitialState": false
+        },
+        "a-7": {
+            "id": "a-7",
+            "title": "Select Route",
+            "actionItemGroups": [{
+                "actionItems": [{
+                    "id": "a-7-n",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "selector": ".route-page",
+                            "selectorGuids": ["e52e1546-c187-129e-8fa7-1be99de392b9"]
+                        }
+                    }
+                }]
+            }, {
+                "actionItems": [{
+                    "id": "a-7-n-5",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "selector": ".header",
+                            "selectorGuids": ["7c4664ec-5c61-7da2-7cb9-e7b2dc2c1802"]
+                        }
+                    }
+                }, {
+                    "id": "a-7-n-6",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "useEventTarget": "PARENT",
+                            "selector": ".plan-your-route",
+                            "selectorGuids": ["c228547a-d8cb-494f-2a44-4b86a784679b"]
+                        }
+                    }
+                }, {
+                    "id": "a-7-n-4",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "block",
+                        "target": {
+                            "selector": ".route-page",
+                            "selectorGuids": ["e52e1546-c187-129e-8fa7-1be99de392b9"]
+                        }
+                    }
+                }]
+            }],
+            "createdOn": 1558736425358,
+            "useFirstGroupAsInitialState": true
+        },
+        "a-8": {
+            "id": "a-8",
+            "title": "Exit Route",
+            "actionItemGroups": [{
+                "actionItems": [{
+                    "id": "a-8-n-3",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "block",
+                        "target": {
+                            "selector": ".header",
+                            "selectorGuids": ["7c4664ec-5c61-7da2-7cb9-e7b2dc2c1802"]
+                        }
+                    }
+                }, {
+                    "id": "a-8-n-4",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "block",
+                        "target": {
+                            "selector": ".plan-your-route",
+                            "selectorGuids": ["c228547a-d8cb-494f-2a44-4b86a784679b"]
+                        }
+                    }
+                }, {
+                    "id": "a-8-n-5",
+                    "actionTypeId": "GENERAL_DISPLAY",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "value": "none",
+                        "target": {
+                            "useEventTarget": "PARENT",
+                            "selector": ".route-page",
+                            "selectorGuids": ["e52e1546-c187-129e-8fa7-1be99de392b9"]
+                        }
+                    }
+                }]
+            }],
+            "createdOn": 1558737271822,
+            "useFirstGroupAsInitialState": false
+        },
+        "a-9": {
+            "id": "a-9",
+            "title": "map scroll animation",
+            "continuousParameterGroups": [{
+                "id": "a-9-p",
+                "type": "SCROLL_PROGRESS",
+                "parameterLabel": "Scroll",
+                "continuousActionGroups": [{
+                    "keyframe": 42,
+                    "actionItems": [{
+                        "id": "a-9-n",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".result-layer",
+                                "selectorGuids": ["e788bf62-d058-ce2d-da19-aebcbb64882c"]
+                            },
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "VH",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "keyframe": 100,
+                    "actionItems": [{
+                        "id": "a-9-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".result-layer",
+                                "selectorGuids": ["e788bf62-d058-ce2d-da19-aebcbb64882c"]
+                            },
+                            "yValue": -80,
+                            "xUnit": "PX",
+                            "yUnit": "VH",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }]
+            }],
+            "createdOn": 1558738317726
         }
     },
     "site": {
