@@ -202,7 +202,7 @@
     } : function() {
         return !0
     };
-    var O, b = "resize.webflow orientationchange.webflow load.webflow";
+    var b, O = "resize.webflow orientationchange.webflow load.webflow";
 
     function T(t, e) {
         var n = [],
@@ -225,16 +225,17 @@
     }
 
     function w() {
-        O && (O.reject(), c.off("load", O.resolve)), O = new u.Deferred, c.on("load", O.resolve)
+        b && (b.reject(), c.off("load", b.resolve)), b = new u.Deferred, c.on("load", b.resolve)
     }
-    r.resize = T(c, b), r.scroll = T(c, "scroll.webflow resize.webflow orientationchange.webflow load.webflow"), r.redraw = T(), r.location = function(t) {
+
+    r.resize = T(c, O), r.scroll = T(c, "scroll.webflow resize.webflow orientationchange.webflow load.webflow"), r.redraw = T(), r.location = function (t) {
         window.location = t
     }, r.env() && (r.location = function() {}), r.ready = function() {
         p = !0, v ? (v = !1, l.each(i, h)) : l.each(o, S), l.each(a, S), r.resize.up()
     }, r.load = function(t) {
-        O.then(t)
+        b.then(t)
     }, r.destroy = function(t) {
-        t = t || {}, v = !0, c.triggerHandler("__wf_destroy"), null != t.domready && (p = t.domready), l.each(i, E), r.resize.off(), r.scroll.off(), r.redraw.off(), o = [], a = [], "pending" === O.state() && w()
+        t = t || {}, v = !0, c.triggerHandler("__wf_destroy"), null != t.domready && (p = t.domready), l.each(i, E), r.resize.off(), r.scroll.off(), r.redraw.off(), o = [], a = [], "pending" === b.state() && w()
     }, u(r.ready), w(), t.exports = window.Webflow = r
 }, function(t, e, n) {
     var r = n(7),
@@ -351,7 +352,7 @@
     } : function(t) {
         return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
     };
-    e.clone = c, e.addLast = l, e.addFirst = d, e.removeLast = p, e.removeFirst = v, e.insert = h, e.removeAt = E, e.replaceAt = _, e.getIn = y, e.set = g, e.setIn = m, e.update = I, e.updateIn = O, e.merge = b, e.mergeDeep = T, e.mergeIn = S, e.omit = w, e.addDefaults = A;
+    e.clone = c, e.addLast = l, e.addFirst = d, e.removeLast = p, e.removeFirst = v, e.insert = h, e.removeAt = E, e.replaceAt = _, e.getIn = y, e.set = g, e.setIn = m, e.update = I, e.updateIn = b, e.merge = O, e.mergeDeep = T, e.mergeIn = S, e.omit = w, e.addDefaults = A;
     /*!
      * Timm
      *
@@ -467,11 +468,11 @@
         return g(t, e, n(null == t ? void 0 : t[e]))
     }
 
-    function O(t, e, n) {
+    function b(t, e, n) {
         return m(t, e, n(y(t, e)))
     }
 
-    function b(t, e, n, r, i, o) {
+    function O(t, e, n, r, i, o) {
         for (var a = arguments.length, u = Array(a > 6 ? a - 6 : 0), c = 6; c < a; c++) u[c - 6] = arguments[c];
         return u.length ? s.call.apply(s, [null, !1, !1, t, e, n, r, i, o].concat(u)) : s(!1, !1, t, e, n, r, i, o)
     }
@@ -519,8 +520,8 @@
         set: g,
         setIn: m,
         update: I,
-        updateIn: O,
-        merge: b,
+        updateIn: b,
+        merge: O,
         mergeDeep: T,
         mergeIn: S,
         omit: w,
@@ -539,10 +540,9 @@
         };
 
     function a(t) {
-        return t && t.__esModule ? t : {
-            default: t
+        return t && t.__esModule ? t : {default: t}
         }
-    }
+
     e.default = "function" == typeof i.default && "symbol" === o(r.default) ? function(t) {
         return void 0 === t ? "undefined" : o(t)
     } : function(t) {
@@ -1089,12 +1089,8 @@
         _ = u.IX2_EVENT_STATE_CHANGED,
         y = u.IX2_ANIMATION_FRAME_CHANGED,
         g = u.IX2_PARAMETER_CHANGED,
-        m = u.IX2_INSTANCE_ADDED,
-        I = u.IX2_INSTANCE_STARTED,
-        O = u.IX2_INSTANCE_REMOVED,
-        b = u.IX2_ELEMENT_STATE_CHANGED,
-        T = u.IX2_ACTION_LIST_PLAYBACK_CHANGED,
-        S = u.IX2_VIEWPORT_WIDTH_CHANGED,
+        m = u.IX2_INSTANCE_ADDED, I = u.IX2_INSTANCE_STARTED, b = u.IX2_INSTANCE_REMOVED,
+        O = u.IX2_ELEMENT_STATE_CHANGED, T = u.IX2_ACTION_LIST_PLAYBACK_CHANGED, S = u.IX2_VIEWPORT_WIDTH_CHANGED,
         w = u.IX2_MEDIA_QUERIES_DEFINED,
         A = a.IX2EngineItemTypes.GENERAL_START_ACTION,
         R = a.IX2VanillaUtils.reifyState;
@@ -1209,22 +1205,9 @@
             }
         }
     }, e.instanceRemoved = function(t) {
-        return {
-            type: O,
-            payload: {
-                instanceId: t
-            }
-        }
+        return {type: b, payload: {instanceId: t}}
     }, e.elementStateChanged = function(t, e, n, r) {
-        return {
-            type: b,
-            payload: {
-                elementId: t,
-                actionTypeId: e,
-                current: n,
-                actionItem: r
-            }
-        }
+        return {type: O, payload: {elementId: t, actionTypeId: e, current: n, actionItem: r}}
     }, e.actionListPlaybackChanged = function(t) {
         var e = t.actionListId,
             n = t.isPlaying;
@@ -1449,10 +1432,7 @@
             _ = /[A-Z]/,
             y = "number",
             g = /^(rgb|#)/,
-            m = /(em|cm|mm|in|pt|pc|px)$/,
-            I = /(em|cm|mm|in|pt|pc|px|%)$/,
-            O = /(deg|rad|turn)$/,
-            b = "unitless",
+            m = /(em|cm|mm|in|pt|pc|px)$/, I = /(em|cm|mm|in|pt|pc|px|%)$/, b = /(deg|rad|turn)$/, O = "unitless",
             T = /(all|none) 0s ease 0s/,
             S = /^(width|height)$/,
             w = " ",
@@ -1467,13 +1447,8 @@
                 var e, n, r = "",
                     i = t.split("-");
                 for (e = 0; e < i.length; e++) r += i[e].charAt(0).toUpperCase() + i[e].slice(1);
-                for (e = 0; e < R.length; e++)
-                    if ((n = R[e] + r) in A.style) return {
-                        dom: n,
-                        css: x[e] + t
-                    }
-            },
-            N = e.support = {
+                for (e = 0; e < R.length; e++) if ((n = R[e] + r) in A.style) return {dom: n, css: x[e] + t}
+            }, N = e.support = {
                 bind: Function.prototype.bind,
                 transform: L("transform"),
                 transition: L("transition"),
@@ -1739,12 +1714,12 @@
                             if (a && e.test(t)) return t;
                             r = "number(px) or string(unit or %)";
                             break;
-                        case O:
+                    case b:
                             if (i) return t + this.angle;
                             if (a && e.test(t)) return t;
                             r = "number(deg) or string(angle)";
                             break;
-                        case b:
+                    case O:
                             if (i) return t;
                             if (a && I.test(t)) return t;
                             r = "number(unitless) or string(unit or %)"
@@ -1866,10 +1841,8 @@
                 }, e.destroy = function() {
                     this.stop(), this.context = null, this.ease = this.update = this.complete = a
                 };
-                var c = [],
-                    s = 1e3
-            }),
-            B = f(U, function(t) {
+            var c = [], s = 1e3
+        }), B = f(U, function (t) {
                 t.init = function(t) {
                     this.duration = t.duration || 0, this.complete = t.complete || a, this.context = t.context, this.play()
                 }, t.render = function(t) {
@@ -1973,7 +1946,7 @@
                 height: [G, I],
                 "min-height": [G, I],
                 "max-height": [G, I],
-                "line-height": [G, b],
+            "line-height": [G, O],
                 "scroll-top": [V, y, "scrollTop"],
                 "scroll-left": [V, y, "scrollLeft"]
             },
@@ -1981,16 +1954,16 @@
         N.transform && (Q.transform = [k], q = {
             x: [I, "translateX"],
             y: [I, "translateY"],
-            rotate: [O],
-            rotateX: [O],
-            rotateY: [O],
+            rotate: [b],
+            rotateX: [b],
+            rotateY: [b],
             scale: [y],
             scaleX: [y],
             scaleY: [y],
-            skew: [O],
-            skewX: [O],
-            skewY: [O]
-        }), N.transform && N.backface && (q.z = [I, "translateZ"], q.rotateZ = [O], q.scaleZ = [y], q.perspective = [m]);
+            skew: [b],
+            skewX: [b],
+            skewY: [b]
+        }), N.transform && N.backface && (q.z = [I, "translateZ"], q.rotateZ = [b], q.scaleZ = [y], q.perspective = [m]);
         var $ = /ms/,
             Z = /s|\./;
         return t.tram = e
@@ -2040,20 +2013,12 @@
                 return function() {
                     return new n(this, t)
                 }
-            },
-            O = e + " Iterator",
-            b = "values" == h,
-            T = !1,
-            S = t.prototype,
-            w = S[l] || S["@@iterator"] || h && S[h],
-            A = w || I(h),
-            R = h ? b ? I("entries") : A : void 0,
-            x = "Array" == e && S.entries || w;
-        if (x && (m = f(x.call(new t))) !== Object.prototype && m.next && (s(m, O, !0), r || "function" == typeof m[l] || a(m, l, p)), b && w && "values" !== w.name && (T = !0, A = function() {
+            }, b = e + " Iterator", O = "values" == h, T = !1, S = t.prototype, w = S[l] || S["@@iterator"] || h && S[h],
+            A = w || I(h), R = h ? O ? I("entries") : A : void 0, x = "Array" == e && S.entries || w;
+        if (x && (m = f(x.call(new t))) !== Object.prototype && m.next && (s(m, b, !0), r || "function" == typeof m[l] || a(m, l, p)), O && w && "values" !== w.name && (T = !0, A = function () {
                 return w.call(this)
-            }), r && !_ || !d && !T && S[l] || a(S, l, A), u[e] = A, u[O] = p, h)
-            if (y = {
-                    values: b ? A : I("values"),
+        }), r && !_ || !d && !T && S[l] || a(S, l, A), u[e] = A, u[b] = p, h) if (y = {
+            values: O ? A : I("values"),
                     keys: E ? A : I("keys"),
                     entries: R
                 }, _)
@@ -2101,12 +2066,8 @@
 }, function(t, e, n) {
     t.exports = n(14)
 }, function(t, e, n) {
-    var r = n(19),
-        i = n(145),
-        o = n(49),
-        a = n(47)("IE_PROTO"),
-        u = function() {},
-        c = function() {
+    var r = n(19), i = n(145), o = n(49), a = n(47)("IE_PROTO"), u = function () {
+    }, c = function () {
             var t, e = n(86)("iframe"),
                 r = o.length;
             for (e.style.display = "none", n(148).appendChild(e), e.src = "javascript:", (t = e.contentWindow.document).open(), t.write("<script>document.F=Object<\/script>"), t.close(), c = t.F; r--;) delete c.prototype[o[r]];
@@ -2253,8 +2214,10 @@
         "undefined" != typeof console && "function" == typeof console.error && console.error(t);
         try {
             throw new Error(t)
-        } catch (t) {}
+        } catch (t) {
     }
+    }
+
     n.r(e), n.d(e, "default", function() {
         return r
     })
@@ -2742,8 +2705,7 @@
     Object.defineProperty(e, "__esModule", {
         value: !0
     });
-    var a = O(n(42)),
-        u = O(n(282));
+    var a = b(n(42)), u = b(n(282));
     e.observeRequests = function(t) {
         X({
             store: t,
@@ -2774,37 +2736,21 @@
             },
             onChange: ft
         })
-    }, e.startEngine = lt, e.stopEngine = dt, e.stopAllActionGroups = mt, e.stopActionGroup = It, e.startActionGroup = Ot;
-    var c = O(n(100)),
-        s = O(n(38)),
-        f = O(n(283)),
-        l = O(n(289)),
-        d = O(n(301)),
-        p = O(n(302)),
-        v = O(n(303)),
-        h = O(n(306)),
-        E = O(n(307)),
-        _ = O(n(129)),
-        y = n(2),
-        g = n(77),
-        m = function(t) {
+    }, e.startEngine = lt, e.stopEngine = dt, e.stopAllActionGroups = mt, e.stopActionGroup = It, e.startActionGroup = bt;
+    var c = b(n(100)), s = b(n(38)), f = b(n(283)), l = b(n(289)), d = b(n(301)), p = b(n(302)), v = b(n(303)),
+        h = b(n(306)), E = b(n(307)), _ = b(n(129)), y = n(2), g = n(77), m = function (t) {
             if (t && t.__esModule) return t;
             var e = {};
             if (null != t)
                 for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
             return e.default = t, e
-        }(n(310)),
-        I = O(n(311));
+        }(n(310)), I = b(n(311));
 
-    function O(t) {
-        return t && t.__esModule ? t : {
-            default: t
+    function b(t) {
+        return t && t.__esModule ? t : {default: t}
         }
-    }
-    var b = y.IX2EngineEventTypes,
-        T = b.MOUSE_CLICK,
-        S = b.MOUSE_SECOND_CLICK,
-        w = y.IX2EngineConstants,
+
+    var O = y.IX2EngineEventTypes, T = O.MOUSE_CLICK, S = O.MOUSE_SECOND_CLICK, w = y.IX2EngineConstants,
         A = w.COLON_DELIMITER,
         R = w.BOUNDARY_SELECTOR,
         x = w.HTML_ELEMENT,
@@ -2881,13 +2827,7 @@
                 actionListId: r,
                 eventId: o
             });
-            var l = Ot({
-                store: e,
-                eventId: o,
-                actionListId: r,
-                immediate: u,
-                verbose: s
-            });
+            var l = bt({store: e, eventId: o, actionListId: r, immediate: u, verbose: s});
             s && l && e.dispatch((0, g.actionListPlaybackChanged)({
                 actionListId: r,
                 isPlaying: !u
@@ -2987,11 +2927,9 @@
                                                 E = h.eventTypeId,
                                                 _ = {},
                                                 y = {},
-                                                g = [],
-                                                I = c.continuousActionGroups,
-                                                O = c.id;
-                                            z(E, a) && (O = K(n, O));
-                                            var b = v.hasBoundaryNodes && r ? m.getClosestElement(r, R) : null;
+                                                g = [], I = c.continuousActionGroups, b = c.id;
+                                            z(E, a) && (b = K(n, b));
+                                            var O = v.hasBoundaryNodes && r ? m.getClosestElement(r, R) : null;
                                             I.forEach(function(t) {
                                                 var e = t.keyframe,
                                                     n = t.actionItems;
@@ -2999,8 +2937,7 @@
                                                     var n = t.actionTypeId,
                                                         i = t.config.target;
                                                     if (i) {
-                                                        var a = i.boundaryMode ? b : null,
-                                                            u = $(i) + A + n;
+                                                        var a = i.boundaryMode ? O : null, u = $(i) + A + n;
                                                         if (y[u] = function() {
                                                                 var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                                                                     e = arguments[1],
@@ -3043,7 +2980,7 @@
                                                         actionItem: a,
                                                         elementApi: m
                                                     }, d);
-                                                bt({
+                                                Ot({
                                                     store: e,
                                                     element: n,
                                                     eventId: i,
@@ -3051,7 +2988,7 @@
                                                     actionItem: a,
                                                     destination: p,
                                                     continuous: !0,
-                                                    parameterId: O,
+                                                    parameterId: b,
                                                     actionGroups: o,
                                                     smoothing: f,
                                                     restingValue: l,
@@ -3228,7 +3165,7 @@
                     u = tt(o);
                 a.forEach(function(i) {
                     var a = u ? et(o)(i, t) : null;
-                    bt({
+                    Ot({
                         destination: G({
                             element: i,
                             actionItem: t,
@@ -3284,7 +3221,7 @@
         })
     }
 
-    function Ot(t) {
+    function bt(t) {
         var e = t.store,
             n = t.eventId,
             r = t.eventTarget,
@@ -3306,9 +3243,7 @@
         var g = (0, s.default)(y, [u, "actionItems"], []);
         if (!g.length) return !1;
         if (!Q(E, p.mediaQueryKey)) return !1;
-        var I = p.hasBoundaryNodes && r ? m.getClosestElement(r, R) : null,
-            O = B(g),
-            b = !1;
+        var I = p.hasBoundaryNodes && r ? m.getClosestElement(r, R) : null, b = B(g), O = !1;
         return g.forEach(function(t, a) {
             var s = t.config,
                 l = t.actionTypeId,
@@ -3324,18 +3259,10 @@
                     elementApi: m
                 }).forEach(function(s, p) {
                     var v = d ? et(l)(s, t) : null;
-                    b = !0;
-                    var h = O === a && 0 === p,
-                        E = H({
-                            element: s,
-                            actionItem: t
-                        }),
-                        _ = G({
-                            element: s,
-                            actionItem: t,
-                            elementApi: m
-                        }, v);
-                    bt({
+                    O = !0;
+                    var h = b === a && 0 === p, E = H({element: s, actionItem: t}),
+                        _ = G({element: s, actionItem: t, elementApi: m}, v);
+                    Ot({
                         store: e,
                         element: s,
                         actionItem: t,
@@ -3353,10 +3280,10 @@
                     })
                 })
             }
-        }), b
+        }), O
     }
 
-    function bt(t) {
+    function Ot(t) {
         var e = t.store,
             n = t.computedStyle,
             r = (0, u.default)(t, ["store", "computedStyle"]),
@@ -3425,11 +3352,9 @@
             _ = t.verbose,
             y = t.pluginInstance,
             I = e.getState(),
-            O = I.ixData,
-            b = I.ixSession,
-            T = (O.events[l] || {}).mediaQueries,
-            S = void 0 === T ? O.mediaQueryKeys : T;
-        if (Q(S, b.mediaQueryKey) && (r || n || i)) {
+            b = I.ixData, O = I.ixSession, T = (b.events[l] || {}).mediaQueries,
+            S = void 0 === T ? b.mediaQueryKeys : T;
+        if (Q(S, O.mediaQueryKey) && (r || n || i)) {
             if (s || c === L && i) {
                 e.dispatch((0, g.elementStateChanged)(o, u, s, a));
                 var w = e.getState().ixElements[o] || {},
@@ -3444,7 +3369,7 @@
             }
             if (i) {
                 if (h) {
-                    var M = Ot({
+                    var M = bt({
                         store: e,
                         eventId: l,
                         eventTarget: d,
@@ -3845,26 +3770,8 @@
         f = n(48),
         l = n(50),
         d = n(30),
-        p = n(1),
-        v = n(52),
-        h = n(53),
-        E = n(158),
-        _ = n(159),
-        y = n(19),
-        g = n(20),
-        m = n(15),
-        I = n(45),
-        O = n(22),
-        b = n(88),
-        T = n(160),
-        S = n(161),
-        w = n(7),
-        A = n(29),
-        R = S.f,
-        x = w.f,
-        L = T.f,
-        N = r.Symbol,
-        C = r.JSON,
+        p = n(1), v = n(52), h = n(53), E = n(158), _ = n(159), y = n(19), g = n(20), m = n(15), I = n(45), b = n(22),
+        O = n(88), T = n(160), S = n(161), w = n(7), A = n(29), R = S.f, x = w.f, L = T.f, N = r.Symbol, C = r.JSON,
         M = C && C.stringify,
         P = p("_hidden"),
         D = p("toPrimitive"),
@@ -3877,7 +3784,7 @@
         U = r.QObject,
         B = !U || !U.prototype || !U.prototype.findChild,
         H = o && s(function() {
-            return 7 != b(x({}, "a", {
+            return 7 != O(x({}, "a", {
                 get: function() {
                     return x(this, "a", {
                         value: 7
@@ -3889,7 +3796,7 @@
             r && delete V[e], x(t, e, n), r && t !== V && x(V, e, r)
         } : x,
         W = function(t) {
-            var e = G[t] = b(N.prototype);
+            var e = G[t] = O(N.prototype);
             return e._k = t, e
         },
         Y = k && "symbol" == typeof N.iterator ? function(t) {
@@ -3898,11 +3805,8 @@
             return t instanceof N
         },
         z = function(t, e, n) {
-            return t === V && z(X, e, n), y(t), e = I(e, !0), y(n), i(G, e) ? (n.enumerable ? (i(t, P) && t[P][e] && (t[P][e] = !1), n = b(n, {
-                enumerable: O(0, !1)
-            })) : (i(t, P) || x(t, P, O(1, {})), t[P][e] = !0), H(t, e, n)) : x(t, e, n)
-        },
-        K = function(t, e) {
+            return t === V && z(X, e, n), y(t), e = I(e, !0), y(n), i(G, e) ? (n.enumerable ? (i(t, P) && t[P][e] && (t[P][e] = !1), n = O(n, {enumerable: b(0, !1)})) : (i(t, P) || x(t, P, b(1, {})), t[P][e] = !0), H(t, e, n)) : x(t, e, n)
+        }, K = function (t, e) {
             y(t);
             for (var n, r = E(e = m(e)), i = 0, o = r.length; o > i;) z(t, n = r[i++], e[n]);
             return t
@@ -3929,7 +3833,7 @@
         if (this instanceof N) throw TypeError("Symbol is not a constructor!");
         var t = d(arguments.length > 0 ? arguments[0] : void 0),
             e = function(n) {
-                this === V && e.call(X, n), i(this, P) && i(this[P], t) && (this[P][t] = !1), H(this, t, O(1, n))
+            this === V && e.call(X, n), i(this, P) && i(this[P], t) && (this[P][t] = !1), H(this, t, b(1, n))
             };
         return o && B && H(V, t, {
             configurable: !0,
@@ -3950,10 +3854,8 @@
         },
         keyFor: function(t) {
             if (!Y(t)) throw TypeError(t + " is not a symbol!");
-            for (var e in F)
-                if (F[e] === t) return e
-        },
-        useSetter: function() {
+            for (var e in F) if (F[e] === t) return e
+        }, useSetter: function () {
             B = !0
         },
         useSimple: function() {
@@ -3961,7 +3863,7 @@
         }
     }), a(a.S + a.F * !k, "Object", {
         create: function(t, e) {
-            return void 0 === e ? b(t) : K(b(t), e)
+            return void 0 === e ? O(t) : K(O(t), e)
         },
         defineProperty: z,
         defineProperties: K,
@@ -3994,14 +3896,8 @@
             return c(Object.preventExtensions({}))
         }),
         f = function(t) {
-            a(t, r, {
-                value: {
-                    i: "O" + ++u,
-                    w: {}
-                }
-            })
-        },
-        l = t.exports = {
+        a(t, r, {value: {i: "O" + ++u, w: {}}})
+    }, l = t.exports = {
             KEY: r,
             NEED: !1,
             fastKey: function(t, e) {
@@ -4571,21 +4467,15 @@
         v = "[object Object]",
         h = Object.prototype.hasOwnProperty;
     t.exports = function(t, e, n, E, _, y) {
-        var g = c(t),
-            m = c(e),
-            I = g ? p : u(t),
-            O = m ? p : u(e),
-            b = (I = I == d ? v : I) == v,
-            T = (O = O == d ? v : O) == v,
-            S = I == O;
+        var g = c(t), m = c(e), I = g ? p : u(t), b = m ? p : u(e), O = (I = I == d ? v : I) == v,
+            T = (b = b == d ? v : b) == v, S = I == b;
         if (S && s(t)) {
             if (!s(e)) return !1;
-            g = !0, b = !1
+            g = !0, O = !1
         }
-        if (S && !b) return y || (y = new r), g || f(t) ? i(t, e, n, E, _, y) : o(t, e, I, n, E, _, y);
+        if (S && !O) return y || (y = new r), g || f(t) ? i(t, e, n, E, _, y) : o(t, e, I, n, E, _, y);
         if (!(n & l)) {
-            var w = b && h.call(t, "__wrapped__"),
-                A = T && h.call(e, "__wrapped__");
+            var w = O && h.call(t, "__wrapped__"), A = T && h.call(e, "__wrapped__");
             if (w || A) {
                 var R = w ? t.value() : t,
                     x = A ? e.value() : e;
@@ -4643,10 +4533,8 @@
         y = "[object String]",
         g = "[object Symbol]",
         m = "[object ArrayBuffer]",
-        I = "[object DataView]",
-        O = r ? r.prototype : void 0,
-        b = O ? O.valueOf : void 0;
-    t.exports = function(t, e, n, r, O, T, S) {
+        I = "[object DataView]", b = r ? r.prototype : void 0, O = b ? b.valueOf : void 0;
+    t.exports = function (t, e, n, r, b, T, S) {
         switch (n) {
             case I:
                 if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset) return !1;
@@ -4670,10 +4558,10 @@
                 var R = S.get(t);
                 if (R) return R == e;
                 r |= f, S.set(t, e);
-                var x = a(w(t), w(e), r, O, T, S);
+                var x = a(w(t), w(e), r, b, T, S);
                 return S.delete(t), x;
             case g:
-                if (b) return b.call(t) == b.call(e)
+                if (O) return O.call(t) == O.call(e)
         }
         return !1
     }
@@ -5112,13 +5000,10 @@
         u = c(n(41));
 
     function c(t) {
-        return t && t.__esModule ? t : {
-            default: t
+        return t && t.__esModule ? t : {default: t}
         }
-    }
-    Object.defineProperty(e, "__esModule", {
-        value: !0
-    }), e.getItemConfigByKey = void 0, e.getInstanceId = function() {
+
+    Object.defineProperty(e, "__esModule", {value: !0}), e.getItemConfigByKey = void 0, e.getInstanceId = function () {
         return "i" + w++
     }, e.getElementId = function(t, e) {
         for (var n in t) {
@@ -5212,12 +5097,7 @@
             case g.STYLE_BORDER:
             case g.STYLE_TEXT_COLOR:
                 return function(t) {
-                    var e = t.element,
-                        n = t.actionTypeId,
-                        r = t.computedStyle,
-                        i = t.getStyle,
-                        o = b[n],
-                        a = i(e, o),
+                    var e = t.element, n = t.actionTypeId, r = t.computedStyle, i = t.getStyle, o = O[n], a = i(e, o),
                         u = X.test(a) ? a : r[o],
                         c = function(t, e) {
                             var n = t.exec(e);
@@ -5273,25 +5153,17 @@
                     p = r.config,
                     v = p.widthUnit,
                     h = p.heightUnit,
-                    y = r.config,
-                    I = y.widthValue,
-                    O = y.heightValue;
-                if (!m.IS_BROWSER_ENV) return {
-                    widthValue: I,
-                    heightValue: O
-                };
+                    y = r.config, I = y.widthValue, b = y.heightValue;
+                if (!m.IS_BROWSER_ENV) return {widthValue: I, heightValue: b};
                 if (v === _.AUTO) {
-                    var b = f(n, _.WIDTH);
-                    l(n, _.WIDTH, ""), I = d(n, "offsetWidth"), l(n, _.WIDTH, b)
+                    var O = f(n, _.WIDTH);
+                    l(n, _.WIDTH, ""), I = d(n, "offsetWidth"), l(n, _.WIDTH, O)
                 }
                 if (h === _.AUTO) {
                     var T = f(n, _.HEIGHT);
-                    l(n, _.HEIGHT, ""), O = d(n, "offsetHeight"), l(n, _.HEIGHT, T)
+                    l(n, _.HEIGHT, ""), b = d(n, "offsetHeight"), l(n, _.HEIGHT, T)
                 }
-                return {
-                    widthValue: I,
-                    heightValue: O
-                };
+                return {widthValue: I, heightValue: b};
             case g.STYLE_BACKGROUND_COLOR:
             case g.STYLE_BORDER:
             case g.STYLE_TEXT_COLOR:
@@ -5380,12 +5252,9 @@
                         case g.STYLE_BACKGROUND_COLOR:
                         case g.STYLE_BORDER:
                         case g.STYLE_TEXT_COLOR:
-                            var y = b[u],
-                                m = Math.round(n.rValue),
-                                I = Math.round(n.gValue),
-                                O = Math.round(n.bValue),
+                            var y = O[u], m = Math.round(n.rValue), I = Math.round(n.gValue), b = Math.round(n.bValue),
                                 T = n.aValue;
-                            k(t, y, o), a(t, y, T >= 1 ? "rgb(" + m + "," + I + "," + O + ")" : "rgba(" + m + "," + I + "," + O + "," + T + ")");
+                            k(t, y, o), a(t, y, T >= 1 ? "rgb(" + m + "," + I + "," + b + ")" : "rgba(" + m + "," + I + "," + b + "," + T + ")");
                             break;
                         default:
                             var S = c.unit,
@@ -5523,14 +5392,13 @@
         m = n(58);
 
     function I(t) {
-        return t && t.__esModule ? t : {
-            default: t
+        return t && t.__esModule ? t : {default: t}
         }
-    }
-    var O = function(t) {
+
+    var b = function (t) {
             return t.trim()
         },
-        b = Object.freeze((r = {}, (0, u.default)(r, g.STYLE_BACKGROUND_COLOR, _.BACKGROUND_COLOR), (0, u.default)(r, g.STYLE_BORDER, _.BORDER_COLOR), (0, u.default)(r, g.STYLE_TEXT_COLOR, _.COLOR), r)),
+        O = Object.freeze((r = {}, (0, u.default)(r, g.STYLE_BACKGROUND_COLOR, _.BACKGROUND_COLOR), (0, u.default)(r, g.STYLE_BORDER, _.BORDER_COLOR), (0, u.default)(r, g.STYLE_TEXT_COLOR, _.COLOR), r)),
         T = Object.freeze((i = {}, (0, u.default)(i, m.TRANSFORM_PREFIXED, _.TRANSFORM), (0, u.default)(i, _.BACKGROUND_COLOR, _.BACKGROUND), (0, u.default)(i, _.OPACITY, _.OPACITY), (0, u.default)(i, _.FILTER, _.FILTER), (0, u.default)(i, _.WIDTH, _.WIDTH), (0, u.default)(i, _.HEIGHT, _.HEIGHT), i)),
         S = {},
         w = 1;
@@ -5570,28 +5438,22 @@
             v = o.isSiblingNode,
             h = e.target;
         if (!h) return [];
-        var E = x(h),
-            g = E.id,
-            I = E.objectId,
-            O = E.selector,
-            b = E.selectorGuids,
-            T = E.appliesTo,
+        var E = x(h), g = E.id, I = E.objectId, b = E.selector, O = E.selectorGuids, T = E.appliesTo,
             w = E.useEventTarget;
         if (I) return [S[I] || (S[I] = {})];
         if (T === y.PAGE) {
             var A = a(g);
             return A ? [A] : []
         }
-        var R = (0, d.default)(n, "action.config.affectedElements", {})[g || O] || {},
-            L = Boolean(R.id || R.selector),
+        var R = (0, d.default)(n, "action.config.affectedElements", {})[g || b] || {}, L = Boolean(R.id || R.selector),
             N = void 0,
             C = void 0,
             M = void 0,
             P = n && u(x(n.target));
         if (L ? (N = R.limitAffectedElements, C = P, M = u(R)) : C = M = u({
                 id: g,
-                selector: O,
-                selectorGuids: b
+            selector: b,
+            selectorGuids: O
             }), n && w) {
             var D = r && (M || !0 === w) ? [r] : c(P);
             if (M) {
@@ -5694,7 +5556,8 @@
                     o = n.setStyle,
                     a = i(t, _.WILL_CHANGE);
                 if (a) {
-                    var u = a.split(_.COMMA_DELIMITER).map(O); - 1 === u.indexOf(r) && o(t, _.WILL_CHANGE, u.concat(r).join(_.COMMA_DELIMITER))
+                    var u = a.split(_.COMMA_DELIMITER).map(b);
+                    -1 === u.indexOf(r) && o(t, _.WILL_CHANGE, u.concat(r).join(_.COMMA_DELIMITER))
                 } else o(t, _.WILL_CHANGE, r)
             }
         }
@@ -5707,7 +5570,7 @@
                 var i = n.getStyle,
                     o = n.setStyle,
                     a = i(t, _.WILL_CHANGE);
-                a && -1 !== a.indexOf(r) && o(t, _.WILL_CHANGE, a.split(_.COMMA_DELIMITER).map(O).filter(function(t) {
+                a && -1 !== a.indexOf(r) && o(t, _.WILL_CHANGE, a.split(_.COMMA_DELIMITER).map(b).filter(function (t) {
                     return t !== r
                 }).join(_.COMMA_DELIMITER))
             }
@@ -5781,7 +5644,7 @@
                 case g.STYLE_BACKGROUND_COLOR:
                 case g.STYLE_BORDER:
                 case g.STYLE_TEXT_COLOR:
-                    e(t, b[n], r);
+                    e(t, O[n], r);
                     break;
                 case g.GENERAL_DISPLAY:
                     e(t, _.DISPLAY, r)
@@ -6016,11 +5879,8 @@
                     g = _.isPlaying;
                 return (0, i.setIn)(t, ["playbackState", y], g);
             case d:
-                for (var m = e.payload, I = m.width, O = m.mediaQueries, b = O.length, T = null, S = 0; S < b; S++) {
-                    var w = O[S],
-                        A = w.key,
-                        R = w.min,
-                        x = w.max;
+                for (var m = e.payload, I = m.width, b = m.mediaQueries, O = b.length, T = null, S = 0; S < O; S++) {
+                    var w = b[S], A = w.key, R = w.min, x = w.max;
                     if (I >= R && I <= x) {
                         T = A;
                         break
@@ -6076,7 +5936,7 @@
                 g = p(n + y * d),
                 m = 100 * g;
             if (g === n && t.current) return t;
-            for (var I = void 0, O = void 0, b = void 0, T = void 0, S = 0, w = o.length; S < w; S++) {
+            for (var I = void 0, b = void 0, O = void 0, T = void 0, S = 0, w = o.length; S < w; S++) {
                 var A = o[S],
                     R = A.keyframe,
                     x = A.actionItems;
@@ -6084,27 +5944,19 @@
                     I = x[0];
                     var L = o[S + 1],
                         N = L && m !== R;
-                    O = N ? L.actionItems[0] : null, N && (b = R / 100, T = (L.keyframe - R) / 100)
+                    b = N ? L.actionItems[0] : null, N && (O = R / 100, T = (L.keyframe - R) / 100)
                 }
             }
             var C = {};
-            if (I && !O)
-                for (var M = 0, P = a.length; M < P; M++) {
+            if (I && !b) for (var M = 0, P = a.length; M < P; M++) {
                     var D = a[M];
                     C[D] = _(s, D, I.config, f, g)
-                } else if (I && O)
-                    for (var j = (g - b) / T, F = I.config.easing, G = v(F, j), X = 0, V = a.length; X < V; X++) {
-                        var k = a[X],
-                            U = _(s, k, I.config, f, g),
-                            B = (_(s, k, O.config, f, g) - U) * G + U;
+            } else if (I && b) for (var j = (g - O) / T, F = I.config.easing, G = v(F, j), X = 0, V = a.length; X < V; X++) {
+                var k = a[X], U = _(s, k, I.config, f, g), B = (_(s, k, b.config, f, g) - U) * G + U;
                         C[k] = B
                     }
-            return (0, i.merge)(t, {
-                position: g,
-                current: C
-            })
-        },
-        I = function(t, e) {
+            return (0, i.merge)(t, {position: g, current: C})
+        }, I = function (t, e) {
             var n = t,
                 r = n.active,
                 o = n.origin,
@@ -6124,10 +5976,8 @@
             if (r && o) {
                 var I = m - (a + g);
                 if (s) {
-                    var O = m - a,
-                        b = y + g,
-                        T = p(Math.min(Math.max(0, O / b), 1));
-                    t = (0, i.set)(t, "verboseTimeElapsed", b * T)
+                    var b = m - a, O = y + g, T = p(Math.min(Math.max(0, b / O), 1));
+                    t = (0, i.set)(t, "verboseTimeElapsed", O * T)
                 }
                 if (I < 0) return t;
                 var S = p(Math.min(Math.max(0, I / y), 1)),
@@ -6157,16 +6007,8 @@
                     o = n.elementId,
                     d = n.actionItem,
                     p = n.eventId,
-                    v = n.eventTarget,
-                    h = n.eventStateKey,
-                    E = n.actionListId,
-                    _ = n.groupIndex,
-                    O = n.isCarrier,
-                    b = n.origin,
-                    T = n.destination,
-                    S = n.immediate,
-                    w = n.verbose,
-                    A = n.continuous,
+                    v = n.eventTarget, h = n.eventStateKey, E = n.actionListId, _ = n.groupIndex, b = n.isCarrier,
+                    O = n.origin, T = n.destination, S = n.immediate, w = n.verbose, A = n.continuous,
                     R = n.parameterId,
                     x = n.actionGroups,
                     L = n.smoothing,
@@ -6184,7 +6026,7 @@
                     active: !1,
                     position: 0,
                     start: 0,
-                    origin: b,
+                    origin: O,
                     destination: T,
                     destinationKeys: j,
                     immediate: S,
@@ -6198,7 +6040,7 @@
                     actionListId: E,
                     groupIndex: _,
                     renderType: P,
-                    isCarrier: O,
+                    isCarrier: b,
                     styleProp: D,
                     continuous: A,
                     parameterId: R,
@@ -6667,18 +6509,18 @@
 
         function I() {
             var t = i();
-            if (m(t)) return O(t);
+            if (m(t)) return b(t);
             p = setTimeout(I, function(t) {
                 var n = e - (t - v);
                 return _ ? c(n, l - (t - h)) : n
             }(t))
         }
 
-        function O(t) {
+        function b(t) {
             return p = void 0, y && s ? g(t) : (s = f = void 0, d)
         }
 
-        function b() {
+        function O() {
             var t = i(),
                 n = m(t);
             if (s = arguments, f = this, v = t, n) {
@@ -6689,11 +6531,12 @@
             }
             return void 0 === p && (p = setTimeout(I, e)), d
         }
-        return e = o(e) || 0, r(n) && (E = !!n.leading, l = (_ = "maxWait" in n) ? u(o(n.maxWait) || 0, e) : l, y = "trailing" in n ? !!n.trailing : y), b.cancel = function() {
+
+        return e = o(e) || 0, r(n) && (E = !!n.leading, l = (_ = "maxWait" in n) ? u(o(n.maxWait) || 0, e) : l, y = "trailing" in n ? !!n.trailing : y), O.cancel = function () {
             void 0 !== p && clearTimeout(p), h = 0, s = v = f = p = void 0
-        }, b.flush = function() {
-            return void 0 === p ? d : O(i())
-        }, b
+        }, O.flush = function () {
+            return void 0 === p ? d : b(i())
+        }, O
     }
 }, function(t, e, n) {
     var r = n(3);
@@ -6785,13 +6628,10 @@
         o = a(n(27));
 
     function a(t) {
-        return t && t.__esModule ? t : {
-            default: t
+        return t && t.__esModule ? t : {default: t}
         }
-    }
-    Object.defineProperty(e, "__esModule", {
-        value: !0
-    });
+
+    Object.defineProperty(e, "__esModule", {value: !0});
     var u = v(n(42)),
         c = v(n(312)),
         s = v(n(38)),
@@ -6801,19 +6641,11 @@
         p = n(2);
 
     function v(t) {
-        return t && t.__esModule ? t : {
-            default: t
+        return t && t.__esModule ? t : {default: t}
         }
-    }
-    var h, E, _, y = p.IX2EngineEventTypes,
-        g = y.MOUSE_CLICK,
-        m = y.MOUSE_SECOND_CLICK,
-        I = y.MOUSE_DOWN,
-        O = y.MOUSE_UP,
-        b = y.MOUSE_OVER,
-        T = y.MOUSE_OUT,
-        S = y.DROPDOWN_CLOSE,
-        w = y.DROPDOWN_OPEN,
+
+    var h, E, _, y = p.IX2EngineEventTypes, g = y.MOUSE_CLICK, m = y.MOUSE_SECOND_CLICK, I = y.MOUSE_DOWN,
+        b = y.MOUSE_UP, O = y.MOUSE_OVER, T = y.MOUSE_OUT, S = y.DROPDOWN_CLOSE, w = y.DROPDOWN_OPEN,
         A = y.SLIDER_ACTIVE,
         R = y.SLIDER_INACTIVE,
         x = y.TAB_ACTIVE,
@@ -6882,15 +6714,8 @@
                 eventTarget: i,
                 eventStateKey: o,
                 actionListId: f
-            }), (0, l.startActionGroup)({
-                store: n,
-                eventId: u,
-                eventTarget: i,
-                eventStateKey: o,
-                actionListId: f
-            }), e
-        },
-        rt = function(t, e) {
+            }), (0, l.startActionGroup)({store: n, eventId: u, eventTarget: i, eventStateKey: o, actionListId: f}), e
+        }, rt = function (t, e) {
             return function(n, r) {
                 return !0 === t(n, r) ? e(n, r) : r
             }
@@ -7066,11 +6891,7 @@
         handler: rt(tt, ht(function(t, e) {
             2 === e.clickCount && nt(t)
         }))
-    }), (0, i.default)(r, I, (0, u.default)({}, it, {
-        types: "mousedown"
-    })), (0, i.default)(r, O, (0, u.default)({}, it, {
-        types: "mouseup"
-    })), (0, i.default)(r, b, {
+    }), (0, i.default)(r, I, (0, u.default)({}, it, {types: "mousedown"})), (0, i.default)(r, b, (0, u.default)({}, it, {types: "mouseup"})), (0, i.default)(r, O, {
         types: "mouseover mouseout",
         handler: rt(tt, pt(function(t, e) {
             e.elementHovered && nt(t)
@@ -7106,16 +6927,12 @@
                 _ = void 0 === E ? a.clientY : E,
                 y = i.pageX,
                 g = void 0 === y ? a.pageX : y,
-                m = i.pageY,
-                I = void 0 === m ? a.pageY : m,
-                O = "X_AXIS" === c,
-                b = "mouseout" === i.type,
-                T = p / 100,
+                m = i.pageY, I = void 0 === m ? a.pageY : m, b = "X_AXIS" === c, O = "mouseout" === i.type, T = p / 100,
                 S = s,
                 w = !1;
             switch (u) {
                 case z:
-                    T = O ? Math.min(h, window.innerWidth) / window.innerWidth : Math.min(_, window.innerHeight) / window.innerHeight;
+                    T = b ? Math.min(h, window.innerWidth) / window.innerWidth : Math.min(_, window.innerHeight) / window.innerHeight;
                     break;
                 case K:
                     var A = st(),
@@ -7123,7 +6940,7 @@
                         x = A.scrollTop,
                         L = A.scrollWidth,
                         N = A.scrollHeight;
-                    T = O ? Math.min(R + g, L) / L : Math.min(x + I, N) / N;
+                    T = b ? Math.min(R + g, L) / L : Math.min(x + I, N) / N;
                     break;
                 case Y:
                 default:
@@ -7144,9 +6961,9 @@
                             left: h,
                             top: _
                         }, M)) break;
-                    w = !0, T = O ? (h - P) / j : (_ - D) / F
+                    w = !0, T = b ? (h - P) / j : (_ - D) / F
             }
-            return b && (T > .95 || T < .05) && (T = Math.round(T)), (u !== Y || w || w !== a.elementHovered) && (T = f ? 1 - T : T, e.dispatch((0, d.parameterChanged)(S, T))), {
+            return O && (T > .95 || T < .05) && (T = Math.round(T)), (u !== Y || w || w !== a.elementHovered) && (T = f ? 1 - T : T, e.dispatch((0, d.parameterChanged)(S, T))), {
                 elementHovered: w,
                 clientX: h,
                 clientY: _,
@@ -7189,19 +7006,12 @@
                 y = r.addEndOffset,
                 g = r.addStartOffset,
                 m = r.addOffsetValue,
-                I = void 0 === m ? 0 : m,
-                O = r.endOffsetValue,
-                b = void 0 === O ? 0 : O;
+                I = void 0 === m ? 0 : m, b = r.endOffsetValue, O = void 0 === b ? 0 : b;
             if (p === z) {
                 var T = "X_AXIS" === v ? u / s : c / f;
-                return T !== o.scrollPercent && n.dispatch((0, d.parameterChanged)(h, T)), {
-                    scrollPercent: T
+                return T !== o.scrollPercent && n.dispatch((0, d.parameterChanged)(h, T)), {scrollPercent: T}
                 }
-            }
-            var S = q(i, h),
-                w = e.getBoundingClientRect(),
-                A = (g ? I : 0) / 100,
-                R = (y ? b : 0) / 100;
+            var S = q(i, h), w = e.getBoundingClientRect(), A = (g ? I : 0) / 100, R = (y ? O : 0) / 100;
             A = E ? A : 1 - A, R = _ ? R : 1 - R;
             var x = w.top + Math.min(w.height * A, l),
                 L = w.top + w.height * R - x,
@@ -7445,30 +7255,27 @@
             c = r.env(),
             s = window.location,
             f = document.createElement("a"),
-            l = "w--current",
-            d = /^#[\w:.-]+$/,
-            p = /index\.(html|php)$/,
-            v = /\/$/;
+            l = "w--current", d = /index\.(html|php)$/, p = /\/$/;
 
-        function h(e) {
+        function v(e) {
             var r = n && e.getAttribute("href-disabled") || e.getAttribute("href");
             if (f.href = r, !(r.indexOf(":") >= 0)) {
                 var a = t(e);
-                if (0 === r.indexOf("#") && d.test(r)) {
-                    var u = t(r);
+                if (f.hash.length > 1 && f.host + f.pathname === s.host + s.pathname) {
+                    var u = t(f.hash);
                     u.length && i.push({
                         link: a,
                         sec: u,
                         active: !1
                     })
                 } else if ("#" !== r && "" !== r) {
-                    var c = f.href === s.href || r === o || p.test(r) && v.test(o);
-                    _(a, l, c)
+                    var c = f.href === s.href || r === o || d.test(r) && p.test(o);
+                    E(a, l, c)
                 }
             }
         }
 
-        function E() {
+        function h() {
             var t = u.scrollTop(),
                 n = u.height();
             e.each(i, function(e) {
@@ -7478,18 +7285,18 @@
                     a = i.outerHeight(),
                     u = .5 * n,
                     c = i.is(":visible") && o + a - u >= t && o + u <= t + n;
-                e.active !== c && (e.active = c, _(r, l, c))
+                e.active !== c && (e.active = c, E(r, l, c))
             })
         }
 
-        function _(t, e, n) {
+        function E(t, e, n) {
             var r = t.hasClass(e);
             n && r || (n || r) && (n ? t.addClass(e) : t.removeClass(e))
         }
         return a.ready = a.design = a.preview = function() {
-            n = c && r.env("design"), o = r.env("slug") || s.pathname || "", r.scroll.off(E), i = [];
-            for (var t = document.links, e = 0; e < t.length; ++e) h(t[e]);
-            i.length && (r.scroll.on(E), E())
+            n = c && r.env("design"), o = r.env("slug") || s.pathname || "", r.scroll.off(h), i = [];
+            for (var t = document.links, e = 0; e < t.length; ++e) v(t[e]);
+            i.length && (r.scroll.on(h), h())
         }, a
     })
 }, function(t, e, n) {
@@ -7666,8 +7473,7 @@
                         h = c.find(".w-file-remove-link"),
                         _ = v.find(".w-file-upload-file-name"),
                         y = p.attr("data-w-size-error"),
-                        g = p.attr("data-w-type-error"),
-                        O = p.attr("data-w-generic-error");
+                        g = p.attr("data-w-type-error"), b = p.attr("data-w-generic-error");
                     if (E) f.on("click", function(t) {
                         t.preventDefault()
                     }), l.on("click", function(t) {
@@ -7697,13 +7503,12 @@
                                 })
                             }(r, S))
                         });
-                        var b = l.outerHeight();
-                        f.height(b), f.width(1)
+                        var O = l.outerHeight();
+                        f.height(O), f.width(1)
                     }
 
                     function T(t) {
-                        var r = t.responseJSON && t.responseJSON.msg,
-                            i = O;
+                        var r = t.responseJSON && t.responseJSON.msg, i = b;
                         "string" == typeof r && 0 === r.indexOf("InvalidFileTypeError") ? i = g : "string" == typeof r && 0 === r.indexOf("MaxFileSizeError") && (i = y), p.text(i), f.removeAttr("data-value"), f.val(""), a.toggle(!1), o.toggle(!0), s.toggle(!0), n.fileUploads[e].uploading = !1, A() || m(n)
                     }
 
@@ -7745,7 +7550,7 @@
                 }(e, o)
             });
             var c = o.action = r.attr("action");
-            o.handler = null, o.redirect = r.attr("data-redirect"), _.test(c) ? o.handler = T : c || (i ? o.handler = "function" == typeof hostedSubmitWebflow ? hostedSubmitWebflow : b : y())
+            o.handler = null, o.redirect = r.attr("data-redirect"), _.test(c) ? o.handler = T : c || (i ? o.handler = "function" == typeof hostedSubmitWebflow ? hostedSubmitWebflow : O : y())
         }
 
         function m(t) {
@@ -7759,7 +7564,7 @@
             e.prop("disabled", !0), n && (t.label = e.val(), e.val(n))
         }
 
-        function O(e, n) {
+        function b(e, n) {
             var r = null;
             return n = n || {}, e.find(':input:not([type="submit"]):not([type="file"])').each(function(i, o) {
                 var a = t(o),
@@ -7779,7 +7584,7 @@
             }), r
         }
 
-        function b(t) {
+        function O(t) {
             w(t), S(t)
         }
 
@@ -7789,7 +7594,7 @@
                 i = {};
             if (!/^https/.test(f.href) || /^https/.test(n.action)) {
                 w(n);
-                var o, a = O(r, i);
+                var o, a = b(r, i);
                 if (a) return h(a);
                 I(n), e.each(i, function(t, e) {
                     p.test(e) && (i.EMAIL = t), /^((full[ _-]?)?name)$/i.test(e) && (o = t), /^(first[ _-]?name)$/i.test(e) && (i.FNAME = t), /^(last[ _-]?name)$/i.test(e) && (i.LNAME = t)
