@@ -1,15 +1,19 @@
 
-window.onload= setTimeout(
-    function() {
-    if ( window.orientation == 0 || window.orientation == 180 ) {  
-      if (confirm ('New updates available. Would you like to refresh it now?')){ 
-        $('#live-updates').click();
-        wait();
-      }else{
-         // alert("Your website is not refreshed.");
-      }  
-    }
-}, 10000);
+window.onload = mockUpdates();
+
+function mockUpdates() {
+    return setTimeout(
+        function() {
+        if ( window.orientation == 0 || window.orientation == 180 ) {
+          if (confirm ('New updates available. Would you like to refresh it now?')){
+            $('#live-updates').click();
+            wait();
+          }else{
+             // alert("Your website is not refreshed.");
+          }
+        }
+    }, 10000);
+}
 
 function wait() {
   // document.getElementById('se-pre-con').style.display='block';
