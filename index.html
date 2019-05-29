@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue May 28 2019 01:53:43 GMT+0000 (UTC)  -->
+<!--  This site was edited by Anny -->
 <html data-wf-page="5cbd60c1fad96c817f9b50d5" data-wf-site="5cbd60c1fad96cd1079b50d4">
 
 <head>
   <meta charset="utf-8">
   <title>Industry Capstone</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="height=device-height, width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
@@ -42,13 +42,13 @@
     </div>
   </div>
   <div class="incident-name">
-    <span class="live-box">LIVE</span>
+    <span class="live-box">LIVE</span>  
     I-90 Tanker Crash and Oil Spill
   </div>
   <div class="tabs">
     <div class="tab" id="live-updates" data-w-id="2a7ca9e3-2891-f3ba-8670-088ca52e0c02">
       <div class="tab-link selected" data-w-id="31d9a9f4-8161-8d47-d6f0-3fac5a5dc282">
-        Live updates
+        Information
       </div>
       <div class="link-underline left" data-w-id="6724c52d-3831-4ca1-d7d9-3cfa98b4a501">
       </div>
@@ -71,84 +71,95 @@
 </div>
   <!-- Live Update Section-->
   <section class="live-update" data-w-id="3e47e23a-e844-8307-a8c5-5ef50ca4abab" id="liveupdate">
+    <div class="black-bolded-text">About the incident</div>
+    <div class="incident-summary">
+      A crash involving a tanker and two other vehicles happened in the southbound lanes
+      of the I-5 collector-distributor lanes to I-90.
+    </div>
+    <div class="quick-updates">
+      <div class="notice">
+        <img src="images/Closure-icon.svg" alt="" class="notice-icon">
+        <div class="notice-text">
+          <div class="notice-header">
+            <strong>I-5 South/North</strong>
+          </div>
+          <div class="notice-text-content">
+            All lanes between James Street and West Seattle Bridge are closed.
+            All traffic can use any of the HOV-ramps to exit.
+          </div>
+        </div>
+      </div>
+      <div class="notice" id="update-2" style="display: none;">
+        <img src="images/Closure-icon.svg" alt="" class="notice-icon">
+        <div class="notice-text">
+          <div class="notice-header">
+            <strong>I-90 East/West</strong>
+          </div>
+          <div class="notice-text-content">All lanes between Rainier Avenue South and stadiums are closed.</div>
+        </div>
+      </div>
+      <div class="notice">
+        <img src="images/Notice-icon.svg" alt="" class="notice-icon caution-icon">
+        <div class="notice-text">
+          <div class="notice-header">
+            <strong>Avoid travel in the area if possible</strong>
+          </div>
+          <div class="notice-text-content">Currently no estimate for reopening but expect a long-term closure.</div>
+        </div>
+      </div>
+    </div>
     <div class="updates">
-      <div class="update">
-        <div class="indicator-and-line">
-          <div class="update-indicator">
-          </div>
-          <div class="line-indicator">
-          </div>
-        </div>
-        <div class="time-and-update">
-          <div class="time">
-            12:36 PM
-          </div>
-          <div class="update-text">
-            The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5
-            collector-distributor lanes to I-90
-          </div>
-        </div>
-      </div>
-      <div class="update">
-        <div class="indicator-and-line">
-          <div class="update-indicator">
-          </div>
-          <div class="line-indicator" id="line-1" style="display:none;">
-          </div>
-        </div>
-        <div class="time-and-update">
-          <div class="time">
-            12:58 PM
-          </div>
-          <div class="update-text">
-            All lanes of NB I-5 at the West Seattle Bridge are stopped due to this collision.
-          </div>
-        </div>
-      </div>
-      <div class="update" id="update-1" style="display: none;">
-        <div class="indicator-and-line">
-          <div class="update-indicator">
-          </div>
-          <div class="line-indicator">
-          </div>
-        </div>
-        <div class="time-and-update">
-          <div class="time">
-            Latest update 1:03 PM
-          </div>
-          <div class="update-text">
-            All lanes of WB I-90 at Rainier Ave S are now closed due to this collision. Traffic must exit at Rainier Ave
-            S.
-          </div>
-        </div>
-      </div>
-      <div class="update" id="update-2" style="display: none;">
-        <div class="indicator-and-line">
-          <div class="update-indicator">
-          </div>
-          <div class="line-indicator last-item">
-          </div>
-        </div>
-        <div class="time-and-update">
-          <div class="time">
-            Latest update 1:03 PM
-          </div>
-          <div class="update-text">
-            All lanes of WB I-90 at Rainier Ave S are now closed due to this collision. Traffic must exit at Rainier Ave
-            S.
-          </div>
-        </div>
+      <div class="black-bolded-text">
+        <strong>Live updates</strong>
       </div>
       <div id="se-pre-con" style="margin-left: auto;
-                                          margin-right: auto;
+                                margin-right: auto;
                                           width:10%;
                                           display:none;">
         <img id="loading-image" src="images/Preloader_2.gif" alt="Loading..."/>
-        <p style="color:grey;"> Loading</p>
+        <p style="color:grey; left: 45wh">Loading</p>
+      </div>
+      <div class="update" id="update-1" style="display: none;">
+        <div class="indicator-and-line">
+          <div class="update-indicator"></div>
+          <div class="line-indicator"></div>
+        </div>
+        <div class="time-and-update">
+          <div class="time">1:03 PM</div>
+          <div class="update-text">
+            All lanes of WB I-90 at Rainier Ave S are now closed due to this collision.
+            Traffic must exit at Rainier Ave S.
+          </div>
+        </div>
+      </div>
+      <div class="update">
+        <div class="indicator-and-line">
+          <div class="update-indicator"></div>
+          <div class="line-indicator"></div>
+        </div>
+        <div class="time-and-update">
+          <div class="time">12:58 PM</div>
+          <div class="update-text">
+            All lanes of NB I-5 at the West Seattle Bridge are stopped due to this
+            collision.
+          </div>
+        </div>
+      </div>
+      <div class="update">
+        <div class="indicator-and-line">
+          <div class="update-indicator"></div>
+        </div>
+        <div class="time-and-update">
+          <div class="time">12:43 PM</div>
+          <div class="update-text">
+            The crash involving a tanker and two other vehicles happened in the
+            southbound lanes of the I-5 collector-distributor lanes to I-90.
+          </div>
+        </div>
       </div>
     </div>
     <div class="sign-up">
-      <div class="sign-up-text">
+      <div class="black-bolded-text">
         Sign up for text alerts of this incident
       </div>
       <div class="form-block w-form">
@@ -234,20 +245,27 @@
       <div class="route-text">Recommended route</div>
       <div data-w-id="c32ea523-7c68-4c91-16d1-fd999c38735f" class="route-item">
         <div class="route">
-          <div class="transport-block car-block"><img src="images/Car-Icon.png" width="17" alt=""
-                                                      class="car-icon"></div>
-          <div class="transport-block walk-block"><img src="images/Walk-icon.png" height="16" alt=""
-                                                       class="walk-icon"></div>
-          <div class="transport-block bus-block"><img src="images/Bus-Icon.png" width="15.5" alt=""
-                                                      class="bus-icon">
+          <div class="transport-block car-block">
+            <img src="images/Car-Icon.png" width="17" alt="" class="car-icon">
+          </div>
+          <div class="transport-block walk-block">
+            <img src="images/Walk-icon.png" height="16" alt="" class="walk-icon">
+          </div>
+          <div class="transport-block bus-block">
+            <img src="images/Bus-Icon.png" width="15.5" alt="" class="bus-icon">
             <div class="bus-number">880</div>
           </div>
-          <div class="transport-block walk-block"><img src="images/Walk-icon.png" height="16" alt=""
-                                                       class="walk-icon"></div>
+          <div class="transport-block walk-block">
+            <img src="images/Walk-icon.png" height="16" alt="" class="walk-icon">
+          </div>
         </div>
         <div class="departure-and-arrival">
-          <div class="departure-and-arrival-text">Leave in <strong>3 mins</strong></div>
-          <div class="departure-and-arrival-text">Arrival <strong>2:14 PM</strong></div>
+          <div class="departure-and-arrival-text">Leave in
+            <strong>3 mins</strong>
+          </div>
+          <div class="departure-and-arrival-text">Arrival
+            <strong>2:14 PM</strong>
+          </div>
         </div>
       </div>
       <div class="route-text">Other routes</div>
@@ -274,8 +292,9 @@
           <div class="waiting-dot"></div>
           <div class="waiting-dot"></div>
           <div class="waiting-dot"></div>
-          <div class="transport-block car-block"><img src="images/Car-Icon.png" width="17" alt=""
-                                                      class="car-icon"></div>
+          <div class="transport-block car-block">
+            <img src="images/Car-Icon.png" width="17" alt="" class="car-icon">
+          </div>
         </div>
         <div class="departure-and-arrival">
           <div class="departure-and-arrival-text">Leave in <strong>1 hr 10 mins</strong></div>
@@ -284,12 +303,18 @@
       </div>
       <div class="route-item">
         <div class="route">
-          <div class="transport-block car-block long-block"><img src="images/Car-Icon.png" width="17" alt=""
-                                                                 class="car-icon"></div>
+          <!--<div class="transport-block car-block long-block">-->
+          <div class="transport-block car-block long-block" >
+            <img src="images/Car-Icon.png" width="17" alt="" class="car-icon">
+          </div>
         </div>
         <div class="departure-and-arrival">
-          <div class="departure-and-arrival-text">Leave in <strong>3 mins</strong></div>
-          <div class="departure-and-arrival-text">Arrival <strong>2:45 PM</strong></div>
+          <div class="departure-and-arrival-text">Leave in
+            <strong>3 mins</strong>
+          </div>
+          <div class="departure-and-arrival-text">Arrival
+            <strong>2:45 PM</strong>
+          </div>
         </div>
       </div>
     </div>
@@ -520,153 +545,87 @@
   <!--<div class="footer-notes">Washington State Department of Transportation © 2019</div>-->
 
   <!-- Desktop Version -->
-  <div class="heading-desktop">
-    <div class="div-block-4-desktop w-clearfix">
-      <img alt="" class="image-3-desktop" src="images/wsdot-03.svg">
-      <div class="text-block-4-desktop">
-        <strong class="bold-text">
-          WSDOT
-        </strong>
-        <br>
-        Traffic Incident Notification System
-        </br>
-        <br>
-      </div>
-      </img>
+<div class="heading-desktop">
+  <div class="div-block-4-desktop w-clearfix">
+    <img src="images/capstone-logo-white.png" alt="" class="logo">
+    <div class="text-block-4-desktop">
+      <strong class="bold-text">SAIA<br>
+        ‍</strong>Seattle Area Incident Avoidance
     </div>
   </div>
-  <div class="header-desktop">
-    <span class="text-span-desktop">
-    </span>
-    <strong style="color:red">
-      Please use mobile for access.
-    </strong>
-  </div>
+</div>
+  <!--<div class="header-desktop">-->
+    <!--<span class="text-span-desktop">-->
+    <!--</span>-->
+    <!--<strong style="color:red">-->
+      <!--Please use mobile for access.-->
+    <!--</strong>-->
+  <!--</div>-->
   <!-- Desktop Content-->
-  <!--     <div class="heading-desktop">
-      <div class="div-block-4-desktop w-clearfix">
-          <img alt="" class="image-3-desktop" src="images/wsdot-03.svg">
-          <div class="text-block-4-desktop">
-              <strong class="bold-text">
-                  WSDOT
-              </strong>
-              <br>
-              Traffic Incident Notification System
-              </br>
-          </div>
-          </img>
+<div class="header-desktop">
+  <span class="text-span-desktop">LIVE</span>
+  I-90 Tanker Crash (Demo)
+</div>
+
+<div class="columns w-row">
+  <div class="column w-col w-col-6"><img src="images/Screen-Shot-2019-05-15-at-10.30.20-AM.png" srcset="images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-500.png 500w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-800.png 800w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-1080.png 1080w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-2000.png 2000w, images/Screen-Shot-2019-05-15-at-10.30.20-AM.png 2210w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 46vw, (max-width: 4604px) 48vw, 2210px" alt="" class="image-5">
+    <div class="signup-div-desktop">
+      <div class="text-block-3-desktop">Sign up for text alerts of this incident</div>
+      <div class="form-block-desktop w-form">
+        <form id="wf-form-Phone-Number" name="wf-form-Phone-Number" data-name="Phone Number" class="w-clearfix"><input type="tel" class="phone-text-field w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="Mobile phone number" id="name-2" required=""><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
+        <div class="success-message-desktop w-form-done">
+          <div>You are now signed up for incident alerts for I-90 Tanker Crash.</div>
+        </div>
+        <div class="error-message-desktop w-form-fail">
+          <div>Oops! Something went wrong while submitting the form, please enter a valid phone number.</div>
+        </div>
       </div>
+      <div class="text-block-5-desktop">Washington State Department of Transportation © 2019</div>
+    </div>
   </div>
-  <!--     <div class="header-desktop">
-      <span class="text-span-desktop">
-          LIVE
-      </span>
-      I-90 Tanker Crash
+  <div class="column-2 w-col w-col-6">
+    <div class="text-block-6">MAY 24, 2019</div>
+    <div class="text-block-7">A crash involving a tanker and two other vehicles has blocked the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+    <section id="liveupdate" class="liveupdate-desktop">
+      <div class="textupdates-div-desktop">
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+        <div class="time-div-desktop">
+          <div class="time-desktop">12:36PM</div>
+          <div class="update-text-desktop">The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90</div>
+        </div>
+      </div>
+    </section>
+    <div class="div-block-7">
+      <div class="text-block-8">Plan Your Route</div>
+    </div>
   </div>
-  <div class="columns w-row">
-      <div class="column w-col w-col-6">
-          <img alt="" class="image-5" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 46vw, (max-width: 4604px) 48vw, 2210px" src="images/Screen-Shot-2019-05-15-at-10.30.20-AM.png" srcset="images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-500.png 500w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-800.png 800w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-1080.png 1080w, images/Screen-Shot-2019-05-15-at-10.30.20-AM-p-2000.png 2000w, images/Screen-Shot-2019-05-15-at-10.30.20-AM.png 2210w">
-          <div class="signup-div-desktop">
-              <div class="text-block-3-desktop">
-                  Sign up for text alerts of this incident
-              </div>
-              <div class="form-block-desktop w-form">
-                  <form class="w-clearfix" data-name="Phone Number" id="wf-form-Phone-Number" name="wf-form-Phone-Number">
-                      <input class="phone-text-field w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" placeholder="Mobile phone number" required="" type="tel">
-                      <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Submit">
-                      </input>
-                      </input>
-                  </form>
-                  <div class="success-message-desktop w-form-done">
-                      <div>
-                          You are now signed up for incident alerts for I-90 Tanker Crash.
-                      </div>
-                  </div>
-                  <div class="error-message-desktop w-form-fail">
-                      <div>
-                          Oops! Something went wrong while submitting the form, please enter a valid phone number.
-                      </div>
-                  </div>
-              </div>
-              <div class="text-block-5-desktop">
-                  Washington State Department of Transportation © 2019
-              </div>
-          </div>
-          </img>
-      </div>
-      <div class="column-2 w-col w-col-6">
-          <div class="text-block-6">
-              MAY 24, 2019
-          </div>
-          <div class="text-block-7">
-              A crash involving a tanker and two other vehicles has blocked the southbound lanes of the I-5 collector-distributor lanes to I-90
-          </div>
-          <section class="liveupdate-desktop" id="liveupdate">
-              <div class="textupdates-div-desktop">
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-                  <div class="time-div-desktop">
-                      <div class="time-desktop">
-                          12:36PM
-                      </div>
-                      <div class="update-text-desktop">
-                          The crash involving a tanker and two other vehicles happened in the southbound lanes of the I-5 collector-distributor lanes to I-90
-                      </div>
-                  </div>
-              </div>
-          </section>
-          <div class="div-block-7">
-              <div class="text-block-8">
-                  Plan Your Route
-              </div>
-          </div>
-      </div>
-  </div> -->
+</div>
 
   <!-- Required scripts -->
   <script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript">
   </script>
   <script src="js/webflow.js" type="text/javascript"></script>
-  <script src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+  <!--<script src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>-->
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
   <script src = "js/modeshift_update.js" ></script>
   <!-- [if lte IE 9]>

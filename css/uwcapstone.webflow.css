@@ -17,6 +17,10 @@ position: center;
   background-color: #fff;
 }
 
+.live-update {
+  display: none;
+}
+
 .circle {
   width: 10px;
   height: 10px;
@@ -105,13 +109,13 @@ position: center;
   margin-left: 50px;
 }
 
-/*.logo {*/
-  /*width: 62px;*/
-  /*height: 62px;*/
-  /*margin-top: 20px;*/
-  /*margin-bottom: auto;*/
-  /*float: left;*/
-/*}*/
+.logo {
+  width: 62px;
+  height: 62px;
+  margin-top: 20px;
+  margin-bottom: auto;
+  float: left;
+}
 
 .image-3-desktop {
   width: 62px;
@@ -287,6 +291,14 @@ position: center;
     -ms-flex-align: stretch;
     align-items: stretch;
   }
+
+  .incident-information {
+    display: block;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .line-div {
     position: absolute;
     left: 0%;
@@ -968,18 +980,23 @@ position: center;
     background-color: #000;
   }
   .transport-block.car-block {
-    width: 44px;
+    /*width: 44px;*/
+    width: 11.7vw;
     background-color: #00ac26;
   }
   .transport-block.car-block.long-block {
-    width: 310px;
+    /*width: 310px;*/
+    width:83.2vw;
+    background-color: #00ac26;
   }
   .transport-block.walk-block {
-    width: 38px;
+    /*width: 38px;*/
+    width:10.1vw;
     background-color: #c4c4c4;
   }
   .transport-block.bus-block {
-    width: 100px;
+    /*width: 100px;*/
+    width:26.7vw;
     background-color: #ff7121;
   }
   .bus-number {
@@ -1038,9 +1055,12 @@ position: center;
     align-items: flex-start;
   }
   .waiting-dot {
-    width: 6px;
-    height: 6px;
-    margin-right: 8px;
+    /*width: 6px;*/
+    /*height: 6px;*/
+    width: 1.6vw;
+    height: 1.6vw;
+    /*margin-right: 8px;*/
+    margin-right: 2.1vw;
     border-radius: 100px;
     background-color: #c8c8c8;
   }
@@ -1055,7 +1075,8 @@ position: center;
     left: 0px;
     top: 0px;
     z-index: 2;
-    display: block;
+    /*display: block;*/
+    display: none;
   }
   .map-layer {
     position: fixed;
