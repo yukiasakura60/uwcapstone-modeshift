@@ -1054,6 +1054,10 @@ position: center;
     -ms-flex-align: start;
     align-items: flex-start;
   }
+  .route, .tab, .switch-text, .exit-button { cursor: pointer; }
+  /*#recommend-route-show-more { display: none; }*/
+  /*.recommend-route:hover #recommend-route-show-more { display: block; }*/
+
   .waiting-dot {
     /*width: 6px;*/
     /*height: 6px;*/
@@ -1079,14 +1083,14 @@ position: center;
     display: none;
   }
   .map-layer {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#fff));
-    background-image: linear-gradient(180deg, #000, #fff);
+    /*position: fixed;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*z-index: -1;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#fff));*/
+    /*background-image: linear-gradient(180deg, #000, #fff);*/
   }
   .chosen-route {
     position: relative;
