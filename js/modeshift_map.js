@@ -5,7 +5,7 @@ function initMap() {
     var directionsService = new google.maps.DirectionsService();
     // Create a renderer for directions and bind it to the map.
     var directionsDisplay = new google.maps.DirectionsRenderer({
-        draggable: true,
+        // draggable: true,
         map: map,
         // panel: document.getElementById('right-panel')
     });
@@ -15,13 +15,13 @@ function initMap() {
         center: center,
         zoom: 11,
         mapTypeControl: false,
-        streetViewControl: true,
+        streetViewControl: false,
         fullscreenControl: false
     };
     // Create a map and center it
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    var trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
+    // var trafficLayer = new google.maps.TrafficLayer();
+    // trafficLayer.setMap(map);
     draw(map);
 
     directionsDisplay.setMap(map);
@@ -29,16 +29,16 @@ function initMap() {
         polylineOptions: {
             strokeWeight: 4,
             strokeOpacity: 1,
-            strokeColor:  'orange'
+            strokeColor:  '#2260ff'
         },
         suppressMarkers: true
     });
     // Instantiate an info window to hold step text.
     var stepDisplay = new google.maps.InfoWindow;
     // directionsDisplay.setPanel(document.getElementById('right-panel'));
-    var control = document.getElementById('floating-panel');
-    control.style.display = 'block';
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+    // var control = document.getElementById('floating-panel');
+    // control.style.display = 'block';
+    // map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
     // Display the route between the initial start and end selections.
     // calculateAndDisplayRoute(directionsService, directionsDisplay, markerArray, stepDisplay, map);
 
@@ -53,39 +53,19 @@ function initMap() {
     document.getElementById('end').addEventListener('change', onChangeHandler);
     document.getElementById('mode').addEventListener('change', onChangeHandler);
     document.getElementById('go').addEventListener('click', onChangeHandler);
-    // change();
 }
+// change();
+
 function change() {
-    document.getElementById('driving').selected = false;
-    document.getElementById('walking').selected = true;
-    document.getElementById('driving').selected = true;
-    document.getElementById('walking').selected = false;
+    $('button#go').click();
+    if ($('#route-map').contents().find('button#go').trigger( "click" )) {
+        console.log("success")
+    } else {
+        console.log('bad')
+    }
 }
 
 function draw(map) {
-    var styles = [
-        {stylers: [
-                { hue: "#00ffe6" },
-                { saturation: -20 }
-            ]
-        },{
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [
-                { lightness: 100 },
-                { visibility: "simplified" }
-            ]
-        },{
-            featureType: "road",
-            elementType: "labels",
-            stylers: [
-                { visibility: "off" }
-            ]
-        }
-    ];
-
-    map.setOptions({styles: styles});
-
     var flightPlanCoordinates = [
         {lat: 47.590380, lng: -122.285647},
         {lat: 47.589660, lng: -122.254236}
@@ -137,8 +117,8 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay,
         // Route the directions and pass the response to a function to create
         // markers for each step.
         if (status === 'OK') {
-            document.getElementById('warnings-panel').innerHTML =
-                '<b>' + response.routes[0].warnings + '</b>';
+            // document.getElementById('warnings-panel').innerHTML =
+            //     '<b>' + response.routes[0].warnings + '</b>';
             directionsDisplay.setDirections(response);
             // showSteps(response, markerArray, stepDisplay, map);
             start_pt = new google.maps.LatLng(47.605030, -122.334373);
@@ -154,6 +134,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay,
         } else {
             window.alert('Directions request failed due to ' + status);
         }
+        return true;
     });
 }
 
