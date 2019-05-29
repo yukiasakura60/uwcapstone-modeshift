@@ -13,6 +13,10 @@ position: center;
   /*background: url(../images/Preloader_2.gif) center no-repeat #fff;*/
 /*}*/
 
+iframe {
+    overflow: hidden;
+}
+
 .body {
   background-color: #fff;
 }
@@ -43,6 +47,7 @@ position: center;
 .map {
   display: none;
 }
+
 
 .header {
   display: none;
@@ -1083,12 +1088,13 @@ position: center;
     display: none;
   }
   .map-layer {
-    /*position: fixed;*/
-    /*left: 0px;*/
-    /*top: 0px;*/
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    /*bottom:30vh;*/
     /*z-index: -1;*/
-    /*width: 100vw;*/
-    /*height: 100vh;*/
+    width: 100vw;
+    height: 60vh;
     /*background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#fff));*/
     /*background-image: linear-gradient(180deg, #000, #fff);*/
   }
