@@ -55,7 +55,7 @@ function initMap() {
   ];
   addLine(flightPlanCoordinates, map, '#FF0000');
   addLine(flightPlanCoordinates2, map, '#FF0000');
-  addCircle(center, 3000, map);
+  addCircle(center, 4000, map);
   addMarker(center, map);
 }
 
