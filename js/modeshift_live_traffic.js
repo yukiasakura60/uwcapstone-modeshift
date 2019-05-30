@@ -16,29 +16,29 @@ function initMap() {
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 
-  var styles = [
-    {
-      stylers: [
-        { hue: "#00ffe6" },
-        { saturation: -20 }
-      ]
-    },{
-      featureType: "road",
-      elementType: "geometry",
-      stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels",
-      stylers: [
-        { visibility: "off" }
-      ]
-    }
-  ];
-
-  map.setOptions({styles: styles}); 
+  // var styles = [
+  //   {
+  //     stylers: [
+  //       { hue: "#00ffe6" },
+  //       { saturation: -20 }
+  //     ]
+  //   },{
+  //     featureType: "road",
+  //     elementType: "geometry",
+  //     stylers: [
+  //       { lightness: 100 },
+  //       { visibility: "simplified" }
+  //     ]
+  //   },{
+  //     featureType: "road",
+  //     elementType: "labels",
+  //     stylers: [
+  //       { visibility: "off" }
+  //     ]
+  //   }
+  // ];
+  //
+  // map.setOptions({styles: styles});
 
   var flightPlanCoordinates = [
     {lat: 47.590380, lng: -122.285647},
