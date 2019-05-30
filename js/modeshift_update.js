@@ -31,8 +31,10 @@ function DetectAndServe(){
     } else if (os == "Windows Phone") {
         link.attr("href","https://www.microsoft.com/en-us/store/p/transit-go-ticket/9nk8bzf1khd5");
     } else {
-        alert("Operating System Detection fail: open the official TransitGo Webpage." +
-            "You may select your App store(ios/Android/Windows).")
+        alert("Operating System Detection fail: it seems you are using the computer, please" +
+            " switch to the mobile phone for better access.\n\n" +
+            "You may want to download the TransitGo App later for tickets.\n" +
+            "(You will be able to select your App store (ios/Android/Windows)).")
         link.attr("href","https://kingcounty.gov/depts/transportation/metro/fares-orca/transit-go-ticket.aspx");
     }
     console.log("Set os to " + os)
