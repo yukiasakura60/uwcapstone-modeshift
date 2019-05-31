@@ -4,21 +4,21 @@
 [Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
 <p float="left">
-  <img src="./images/page-1.png" width="100" />
-  <img src="./images/page-2.png" width="100" /> 
-  <img src="./images/page-3.png" width="100" />
-  <img src="./images/page-4.png" width="100" />
-  <img src="./images/page-5.png" width="100" /> 
-  <img src="./images/page-6.png" width="100" />
+  <img src="./images/page-1.png" width="200" />
+  <img src="./images/page-2.png" width="200" /> 
+  <img src="./images/page-3.png" width="200" />
+  <img src="./images/page-4.png" width="200" />
+  <img src="./images/page-5.png" width="200" /> 
+  <img src="./images/page-6.png" width="200" />
 </p>
 
 ## Instructions to view
 - *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
 - If you want to **view the Mobile version on Desktop**, please follow instructions below:
     - Make sure you are using **Chrome** browser
-    - **Right click** on page and select **inspect**
+    - **Right click** on page and select **"Inspect"**
         - <img src="./images/instruction-1.png" alt="insruction-1" width="350"/>
-    - On **top right** of the page, click "Toggle device toolbar" to switch to the mobile version
+    - On **top right** of the page, click **"Toggle device toolbar"** to switch to the mobile version
         - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
     - On **top left** of the page, click on the red the area below, you may select any phone type you want
         - <img src="./images/instruction-3.png" alt="insruction-3" width="350"/>
