@@ -1,8 +1,22 @@
 # Seattle Area Incident Avoidance
 
-##  Final Clickable Demo
+##  Final Clickable Demo 
 [Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
+
+### Instructions
+- Please use mobile for clickable demo, the Desktop version is only for demonstration of the Desktop design.
+- If you want to view the Mobile version on Desktop, please follow instructions below:
+    - Make sure you are using **Chrome** browser
+    - **Right click** on page and select **inspect**
+        - ![insruction-1](images/instruction-1.png =400x)
+    - On top right of the page, click "Toggle device toolbar" to switch to the mobile version
+        - ![insruction-2](images/instruction-2.png =400x)
+    - On top left of the page, click on the red the area below, you may select any phone type you want
+        - ![insruction-2](images/instruction-3.png =400x)
+    - You are now ready to test the mobile version!
+p.s. To go back to the Desktop version, just click on the "Toggle device toolbar" again
+        - ![insruction-2](images/instruction-2.png =400x)
 
 ## Team website
 [Team Webpage](https://annykong.github.io/ModeShift-App/)  |
@@ -37,36 +51,24 @@ Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.
 ├── README.md                   // basic description of the project
 └── .gitignore                  // files to ignore when commiting to this repository
 ```
-## Instructions
-1. Execute `sh run_me_first.sh` or
-	```
-	export FLASK_APP=slowglassApp
-	export FLASK_ENV=development
-	```
-2. Run the App
-	```
-	flask run
-	```
-	You’ll see output similar to this:
-	```
-	* Serving Flask app "flaskr"
-	* Environment: development
-	* Debug mode: on
-	* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-	* Restarting with stat
-	* Debugger is active!
-	* Debugger PIN: 855-212-761
-	```
-	Visit <http://127.0.0.1:5000/> in a browser. You’re now running your Flask web application!
-3. Run the init-db command:
-	```
-	flask init-db
-	```
-	You'll see output:
-	```
-	Initialized the database.
-	```
-	There will now be a `flaskr.sqlite` file in the `instance` folder in your project.
+	
+### Instructions to use your GoogleMap API key
+- Get your own key [here (Get Google API Key)](https://developers.google.com/maps/documentation/javascript/get-api-key).
+- And then, in `test-map/docs/index.html`, substitute `replacekey` in the code below with the API key you got from the previous step.
+  ```
+  <script  id="google" async defer
+           src="https://maps.googleapis.com/maps/api/js?key=replacekey&callback=initMap"
+  async defer></script>
+  ```
+
+## Tests
+[Map Test](https://annykong.github.io/test-map/) |
+[Map Test Repo](https://github.com/AnnyKong/test-map)|
+[1st Iteration](https://annykong.wixsite.com/modeshift-19sp) |
+[2nd iteration Code (no server)](https://github.com/AnnyKong/ModeShift-App/commits/master) |
+[2nd iteration Code (with server)](https://github.com/AnnyKong/ModeShift-App/commits/gh-pages)
+[3rd iteration (Web Design)](https://uwcapstone.webflow.io/)
+
 	
 ## Background - What is this?
 This project is sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and 
@@ -106,12 +108,8 @@ partnerships, incentives, etc?
     - Promptly informing the general population of incidents which impact their commute
     - Behavior change and modeshift behavior reinforcement
 
-## Tests
-[Map Test](https://annykong.github.io/test-map/) |
-[Map Test Repo](https://github.com/AnnyKong/test-map)|
-
 ## Our team
-![Team members](/images/Team-members.png)
+![Team members](/images/Team-members.png =500x)
 - **Pari Gabriel (HCDE): Project Manager**  
   Pari is an organized and detail-oriented student who will be taking lead of the capstone. He will be in charge of   coordinating internal team meetings, submitting reports, and keeping track of the team’s progress throughout the duration of the project.
 
