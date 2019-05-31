@@ -7,10 +7,10 @@
   <img src="./images/page-1.png" width="130" />
   <img src="./images/page-2.png" width="130" /> 
   <img src="./images/page-3.png" width="130" />
-<!--   <img src="./images/page-4.png" width="150" /> -->
+  <img src="./images/page-4.png" width="150" />
   <img src="./images/page-5.png" width="130" /> 
   <img src="./images/page-6.png" width="130" />  
-  <img src="./images/page-7.png" width="130" />
+<!--   <img src="./images/page-7.png" width="130" /> -->
 </p>
 
 ## Instructions to view
