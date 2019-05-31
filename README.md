@@ -36,7 +36,7 @@ partnerships, incentives, etc?
     - Behavior change and modeshift behavior reinforcement
 
 ##  Final Clickable Demo 
-[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
+[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)(https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
 <p float="left">
   <img src="./images/page-1.png" width="140" />
