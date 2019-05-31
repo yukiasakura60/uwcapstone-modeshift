@@ -3,25 +3,33 @@
 ##  Final Clickable Demo 
 [Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
+<p float="left">
+  <img src="./images/page-1.png" width="100" />
+  <img src="./images/page-2.png" width="100" /> 
+  <img src="./images/page-3.png" width="100" />
+  <img src="./images/page-4.png" width="100" />
+  <img src="./images/page-5.png" width="100" /> 
+  <img src="./images/page-6.png" width="100" />
+</p>
 
-### Instructions
-- Please use mobile for clickable demo, the Desktop version is only for demonstration of the Desktop design.
-- If you want to view the Mobile version on Desktop, please follow instructions below:
+## Instructions to view
+- *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
+- If you want to **view the Mobile version on Desktop**, please follow instructions below:
     - Make sure you are using **Chrome** browser
     - **Right click** on page and select **inspect**
-        - ![insruction-1](images/instruction-1.png =400x)
-    - On top right of the page, click "Toggle device toolbar" to switch to the mobile version
-        - ![insruction-2](images/instruction-2.png =400x)
-    - On top left of the page, click on the red the area below, you may select any phone type you want
-        - ![insruction-2](images/instruction-3.png =400x)
+        - <img src="./images/instruction-1.png" alt="insruction-1" width="350"/>
+    - On **top right** of the page, click "Toggle device toolbar" to switch to the mobile version
+        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
+    - On **top left** of the page, click on the red the area below, you may select any phone type you want
+        - <img src="./images/instruction-3.png" alt="insruction-3" width="350"/>
     - You are now ready to test the mobile version!
 p.s. To go back to the Desktop version, just click on the "Toggle device toolbar" again
-        - ![insruction-2](images/instruction-2.png =400x)
+        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
 
 ## Team website
 [Team Webpage](https://annykong.github.io/ModeShift-App/)  |
 [Team GitHub Repo](https://github.com/AnnyKong/ModeShift-App)  
-Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.
+*Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.*
 
 ## Folder Structure
 ```
@@ -63,11 +71,14 @@ Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.
 
 ## Tests
 [Map Test](https://annykong.github.io/test-map/) |
-[Map Test Repo](https://github.com/AnnyKong/test-map)|
-[1st Iteration](https://annykong.wixsite.com/modeshift-19sp) |
-[2nd iteration Code (no server)](https://github.com/AnnyKong/ModeShift-App/commits/master) |
-[2nd iteration Code (with server)](https://github.com/AnnyKong/ModeShift-App/commits/gh-pages)
-[3rd iteration (Web Design)](https://uwcapstone.webflow.io/)
+[Map Test Repo](https://github.com/AnnyKong/test-map)
+
+### Iterations
+- [1st Iteration](https://annykong.wixsite.com/modeshift-19sp)
+- [2nd iteration Code (no server)](https://github.com/AnnyKong/ModeShift-App/commits/master)
+- [2nd iteration Code (with server)](https://github.com/AnnyKong/ModeShift-App/commits/gh-pages)
+- [3rd iteration (Web Design)](https://uwcapstone.webflow.io/)
+- [Current version (Combined Design and functionalities)](https://annykong.github.io/uwcapstone-modeshift/)
 
 	
 ## Background - What is this?
@@ -83,18 +94,11 @@ course of action to take. Our sponsors are seeking recommendations for innovativ
 notification of traffic incidents and solutions for transportation mode-shifting, departure time recommendations, 
 and route shifts during and shortly after traffic incidents.
 
-high-level explanation
-	- team
-	- project purpose
-	- website purpose
-folder structure
-name the starting point
-
 ### Problem Statement 
 How might we innovate forms of transit incident reporting to the general public and provide accessible, 
 mobile solutions for their needs in a timely manner?
 
-###Goals
+### Goals
 Our goal is to create an innovative solution that can help the general public navigate or avoid major incidents 
 and related congestion. When a major incident or multiple major incidents occur, our solution will provide a 
 platform where users can be informed of congestion information, departure time shifts, routing recommendations, 
@@ -109,7 +113,8 @@ partnerships, incentives, etc?
     - Behavior change and modeshift behavior reinforcement
 
 ## Our team
-![Team members](/images/Team-members.png =500x)
+<img src="./images/Team-members.png" alt="Team members" width="550"/>
+
 - **Pari Gabriel (HCDE): Project Manager**  
   Pari is an organized and detail-oriented student who will be taking lead of the capstone. He will be in charge of   coordinating internal team meetings, submitting reports, and keeping track of the team’s progress throughout the duration of the project.
 
