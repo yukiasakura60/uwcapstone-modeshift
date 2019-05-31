@@ -1,10 +1,10 @@
 # Seattle Area Incident Avoidance
-This project is sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and 
-organizations in the public and private sector.
+
+This is a UW cross-disciplinary Capstone project sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and organizations in the public and private sector.
 
 When traffic incidents occur in the Greater Seattle area, our sponsors relay important information through social 
 media, traditional media, electronic roadway signs, and low-power radio stations along with some rare usage of 
-mobile alert systems such as AMBER Alert. While these methods reach a broad group of road users, they fail to 
+mobile alert systems such as AlertSeattle. While these methods reach a broad group of road users, they fail to 
 reach every road user and do not provide adequate solutions in the form of real-time transit recommendations and 
 updates. They are also not able to reach every consumer with specific information about incidents and the best 
 course of action to take. Our sponsors are seeking recommendations for innovative solutions for wide-reaching 
@@ -12,8 +12,8 @@ notification of traffic incidents and solutions for transportation mode-shifting
 and route shifts during and shortly after traffic incidents.
 
 ### Problem Statement 
-How might we innovate forms of transit incident reporting to the general public and provide accessible, 
-mobile solutions for their needs in a timely manner?
+*How might we innovate forms of transit incident reporting to the general public and provide accessible, 
+mobile solutions for their needs in a timely manner?*
 
 ### Goals
 Our goal is to create an innovative solution that can help the general public navigate or avoid major incidents 
@@ -33,14 +33,19 @@ partnerships, incentives, etc?
 [Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
 <p float="left">
-  <img src="./images/page-1.png" width="130" />
-  <img src="./images/page-2.png" width="130" /> 
-  <img src="./images/page-3.png" width="130" />
-  <img src="./images/page-4.png" width="150" />
-  <img src="./images/page-5.png" width="130" /> 
-  <img src="./images/page-6.png" width="130" />  
+  <img src="./images/page-1.png" width="140" />
+  <img src="./images/page-2.png" width="140" /> 
+  <img src="./images/page-3.png" width="140" />
+  <img src="./images/page-4.png" width="140" />
+  <img src="./images/page-5.png" width="140" /> 
+  <img src="./images/page-6.png" width="140" />  
 <!--   <img src="./images/page-7.png" width="130" /> -->
 </p>
+
+### Overview
+Our solution is an interactive, mobile-friendly website which will be hosted on one of the transit agency’s servers. If an incident happens, the server will be activated and the website link will appear active on the official website of King County Metro (KCM), Washington State Department of Transportation (WSDOT), and Seattle Department of Transportation (SDOT), Sound Transit, as well as any other relevant transit agencies. The link would also be sent to Alert Seattle customers as well as those who subscribe to KCM, Sound Transit and WSDOT text alerts directing them to the website. 
+#### System Design Overview
+<img src="./images/system-design.png" width="600" /> 
 
 ### Instructions to view on Desktop
 - *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
