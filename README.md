@@ -1,5 +1,8 @@
-# Seattle Area Incident Avoidance
-
+# Seattle Area Incident Avoidance 
+#### A mobile-friendly Website for general population incident avoidance
+<p float="left">
+<!--   <img src="./images/page-1.png" width="200" /> -->
+</p>
 This is a UW cross-disciplinary Capstone project sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and organizations in the public and private sector.
 
 When traffic incidents occur in the Greater Seattle area, our sponsors relay important information through social 
