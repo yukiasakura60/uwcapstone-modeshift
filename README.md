@@ -18,6 +18,7 @@ Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.
 │   └── webflow.css             // library style file made in webflow
 │
 ├── images/                 // containning all logos and images used for this website.
+│   └── ...
 │
 ├── js/                     // containing all JavaScript files for dynamically updates the website.
 │   ├── modeshift_live_traffic.js   // dynamically fetch and display live traffic data with GoogleMaps JavaScript API
