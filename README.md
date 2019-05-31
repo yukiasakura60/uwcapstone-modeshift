@@ -1,88 +1,4 @@
 # Seattle Area Incident Avoidance
-
-##  Final Clickable Demo 
-[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
-[Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
-<p float="left">
-  <img src="./images/page-1.png" width="150" />
-  <img src="./images/page-2.png" width="150" /> 
-  <img src="./images/page-3.png" width="150" />
-  <img src="./images/page-4.png" width="150" />
-  <img src="./images/page-5.png" width="150" /> 
-  <img src="./images/page-6.png" width="150" />  
-  <img src="./images/page-7.png" width="150" />
-</p>
-
-## Instructions to view
-- *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
-- If you want to **view the Mobile version on Desktop**, please follow instructions below:
-    - Make sure you are using **Chrome** browser
-    - **Right click** on page and select **"Inspect"**
-        - <img src="./images/instruction-1.png" alt="insruction-1" width="350"/>
-    - On **top right** of the page, click **"Toggle device toolbar"** to switch to the mobile version
-        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
-    - On **top left** of the page, click on the red the area below, you may select any phone type you want
-        - <img src="./images/instruction-3.png" alt="insruction-3" width="350"/>
-    - You are now ready to test the mobile version!
-p.s. To go back to the Desktop version, just click on the "Toggle device toolbar" again
-        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
-
-## Team website
-[Team Webpage](https://annykong.github.io/ModeShift-App/)  |
-[Team GitHub Repo](https://github.com/AnnyKong/ModeShift-App)  
-*Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.*
-
-## Folder Structure
-```
-.                       // GitHub Repository contains all files for demo
-├── css/                    // containing all css files for website styles.
-│   ├── uwcapstone.webflow.css  // customized style file for this project
-│   ├── normalize.css           // library style file 
-│   └── webflow.css             // library style file made in webflow
-│
-├── images/                 // containning all logos and images used for this website.
-│   └── ...
-│
-├── js/                     // containing all JavaScript files for dynamically updates the website.
-│   ├── modeshift_live_traffic.js   // dynamically fetch and display live traffic data with GoogleMaps JavaScript API
-│   ├── modeshift_map.js            // dynamically fetch and display routing recommendation with GoogleMaps ApIs
-│   ├── modeshift_update.js         // dynamically mockup scenarios and button/tabs/search... funcationalities
-│   ├── webflow.js                  // library js file made in webflow
-│   └── vendor/                     // library files
-│       ├── bootstrap.js
-│       ├── modernizr-2.8.3-respond-1.4.2.min.js
-│       ├── npm.js
-│       └── jquery-1.11.2.min.js
-│
-├── index.html                  // main file including basic structure of our web
-├── modeshift_live_traffic.html // map with incident demonstration and live traffic for "map section" ("map" tab)
-├── modeshift_map.html          // map with routing recommendation for "routing section" (subpage under "plan your route" tab)
-├── README.md                   // basic description of the project
-└── .gitignore                  // files to ignore when commiting to this repository
-```
-	
-### Instructions to use your GoogleMap API key
-- Get your own key [here (Get Google API Key)](https://developers.google.com/maps/documentation/javascript/get-api-key).
-- And then, in `test-map/docs/index.html`, substitute `replacekey` in the code below with the API key you got from the previous step.
-  ```
-  <script  id="google" async defer
-           src="https://maps.googleapis.com/maps/api/js?key=replacekey&callback=initMap"
-  async defer></script>
-  ```
-
-## Tests
-[Map Test](https://annykong.github.io/test-map/) |
-[Map Test Repo](https://github.com/AnnyKong/test-map)
-
-### Iterations
-- [1st Iteration](https://annykong.wixsite.com/modeshift-19sp)
-- [2nd iteration Code (no server)](https://github.com/AnnyKong/ModeShift-App/commits/master)
-- [2nd iteration Code (with server)](https://github.com/AnnyKong/ModeShift-App/commits/gh-pages)
-- [3rd iteration (Web Design)](https://uwcapstone.webflow.io/)
-- [Current version (Combined Design and functionalities)](https://annykong.github.io/uwcapstone-modeshift/)
-
-	
-## Background - What is this?
 This project is sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and 
 organizations in the public and private sector.
 
@@ -112,6 +28,88 @@ partnerships, incentives, etc?
 2. Recommend design guidelines Metro should consider requiring for future mobile ticketing apps.
     - Promptly informing the general population of incidents which impact their commute
     - Behavior change and modeshift behavior reinforcement
+
+##  Final Clickable Demo 
+[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
+[Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
+<p float="left">
+  <img src="./images/page-1.png" width="150" />
+  <img src="./images/page-2.png" width="150" /> 
+  <img src="./images/page-3.png" width="150" />
+  <img src="./images/page-4.png" width="150" />
+  <img src="./images/page-5.png" width="150" /> 
+  <img src="./images/page-6.png" width="150" />  
+  <img src="./images/page-7.png" width="150" />
+</p>
+
+### Instructions to view on Desktop
+- *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
+- If you want to **view the Mobile version on Desktop**, please follow instructions below:
+    - Make sure you are using **Chrome** browser
+    - **Right click** on page and select **"Inspect"**
+        - <img src="./images/instruction-1.png" alt="insruction-1" width="350"/>
+    - On **top right** of the page, click **"Toggle device toolbar"** to switch to the mobile version
+        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
+    - On **top left** of the page, click on the red the area below, you may select any phone type you want
+        - <img src="./images/instruction-3.png" alt="insruction-3" width="350"/>
+    - You are now ready to test the mobile version!
+p.s. To go back to the Desktop version, just click on the "Toggle device toolbar" again
+        - <img src="./images/instruction-2.png" alt="insruction-2" width="450"/>
+
+
+### Folder Structure
+```
+.                       // GitHub Repository contains all files for demo
+├── css/                    // containing all css files for website styles.
+│   ├── uwcapstone.webflow.css  // customized style file for this project
+│   ├── normalize.css           // library style file 
+│   └── webflow.css             // library style file made in webflow
+│
+├── images/                 // containning all logos and images used for this website.
+│   └── ...
+│
+├── js/                     // containing all JavaScript files for dynamically updates the website.
+│   ├── modeshift_live_traffic.js   // dynamically fetch and display live traffic data with GoogleMaps JavaScript API
+│   ├── modeshift_map.js            // dynamically fetch and display routing recommendation with GoogleMaps ApIs
+│   ├── modeshift_update.js         // dynamically mockup scenarios and button/tabs/search... funcationalities
+│   ├── webflow.js                  // library js file made in webflow
+│   └── vendor/                     // library files
+│       ├── bootstrap.js
+│       ├── modernizr-2.8.3-respond-1.4.2.min.js
+│       ├── npm.js
+│       └── jquery-1.11.2.min.js
+│
+├── index.html                  // main file including basic structure of our web
+├── modeshift_live_traffic.html // map with incident demonstration and live traffic for "map section" ("map" tab)
+├── modeshift_map.html          // map with routing recommendation for "routing section" (subpage under "plan your route" tab)
+├── README.md                   // basic description of the project
+└── .gitignore                  // files to ignore when commiting to this repository
+```
+	
+## Tests
+[Map Test](https://annykong.github.io/test-map/) |
+[Map Test Repo](https://github.com/AnnyKong/test-map)
+
+### Instructions to use your GoogleMap API key
+- Get your own key [here (Get Google API Key)](https://developers.google.com/maps/documentation/javascript/get-api-key).
+- And then, in `test-map/docs/index.html`, substitute `replacekey` in the code below with the API key you got from the previous step.
+  ```
+  <script  id="google" async defer
+           src="https://maps.googleapis.com/maps/api/js?key=replacekey&callback=initMap"
+  async defer></script>
+  ```
+
+## Team website
+[Team Webpage](https://annykong.github.io/ModeShift-App/)  |
+[Team GitHub Repo](https://github.com/AnnyKong/ModeShift-App)  
+*Our Clikcable Demo can be found under the "PROTOTYPE & DEMO" section.*
+
+### Iterations
+- [1st Iteration](https://annykong.wixsite.com/modeshift-19sp)
+- [2nd iteration Code (no server)](https://github.com/AnnyKong/ModeShift-App/commits/master)
+- [2nd iteration Code (with server)](https://github.com/AnnyKong/ModeShift-App/commits/gh-pages)
+- [3rd iteration (Web Design)](https://uwcapstone.webflow.io/)
+- [Current version (Combined Design and functionalities)](https://annykong.github.io/uwcapstone-modeshift/)
 
 ## Our team
 <img src="./images/Team-members.png" alt="Team members" width="550"/>
