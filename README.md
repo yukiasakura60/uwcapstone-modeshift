@@ -3,6 +3,14 @@
 ##  Final Clickable Demo 
 [Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
+<p float="left">
+  <img src="./images/page-1.png" width="100" />
+  <img src="./images/page-2.png" width="100" /> 
+  <img src="./images/page-3.png" width="100" />
+  <img src="./images/page-4.png" width="100" />
+  <img src="./images/page-5.png" width="100" /> 
+  <img src="./images/page-6.png" width="100" />
+</p>
 
 ## Instructions to view
 - *Please use **mobile** for clickable demo, the Desktop version is only for demonstration of the Desktop design*.
