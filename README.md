@@ -6,12 +6,11 @@
 
 #### A mobile-friendly Website for general population incident avoidance
 
-This is a UW cross-disciplinary Capstone project sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and organizations in the public and private sector.
+This is a University of Washington interdisciplinary Capstone project sponsored by Mobility Innovation Center, Challenge Seattle, WSDOT, King County Metro, and Sound Transit.
 
 When traffic incidents occur in the Greater Seattle area, our sponsors relay important information through social 
 media, traditional media, electronic roadway signs, and low-power radio stations along with some rare usage of 
-mobile alert systems such as AlertSeattle. While these methods reach a broad group of road users, they fail to 
-reach every road user and do not provide adequate solutions in the form of real-time transit recommendations and 
+mobile alert systems such as AlertSeattle. While these methods reach a broad group of road users, they do not provide adequate solutions in the form of real-time transit recommendations and 
 updates. They are also not able to reach every consumer with specific information about incidents and the best 
 course of action to take. Our sponsors are seeking recommendations for innovative solutions for wide-reaching 
 notification of traffic incidents and solutions for transportation mode-shifting, departure time recommendations, 
@@ -126,7 +125,7 @@ p.s. To go back to the Desktop version, just click on the "Toggle device toolbar
 <img src="./images/Team-members.png" alt="Team members" width="550"/>
 
 - **Pari Gabriel (HCDE): Project Manager**  
-  Pari is an organized and detail-oriented student who will be taking lead of the capstone. He will be in charge of   coordinating internal team meetings, submitting reports, and keeping track of the team’s progress throughout the duration of the project.
+  Pari is an organized and detail-oriented student who will be taking lead of the capstone. He will be in charge of coordinating internal team meetings, submitting reports, and keeping track of the team’s progress throughout the duration of the project.
 
 - **Chris Angkico (Communications): Marketing Lead**  
   Chris is an experienced researcher and marketing plan writer that will be assigned the role of marketing lead. He will be in charge of evaluating expert and focus group interview information, as well as any pre-existing research information the group collects, to develop a comprehensive strategy to market and advertise our transit incident reporting solution, making sure it gets out to as many different road users as possible. 
