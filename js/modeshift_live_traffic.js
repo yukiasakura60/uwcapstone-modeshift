@@ -83,7 +83,6 @@ function initMap() {
   addLine(flightPlanCoordinates2, map, '#FF0000');
   addCircle(center, 4000, map);
   addMarker(center, map);
-    map.setCenter(center);
 }
 
 var redLines = [
@@ -101,7 +100,9 @@ var orangeLines = [
 ];
 
 function renderDirections(result, map, color) {
-    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsDisplay = new google.maps.DirectionsRenderer({
+        preserveViewport: true
+    });
     directionsDisplay.setOptions({
         polylineOptions: {
             strokeWeight: 4,
