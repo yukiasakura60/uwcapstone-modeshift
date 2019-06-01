@@ -1,8 +1,11 @@
-# Seattle Area Incident Avoidance 
-#### A mobile-friendly Website for general population incident avoidance
 <p float="left">
-<!--   <img src="./images/page-1.png" width="200" /> -->
+  <img src="./images/logo.png" width="300" />
 </p>
+
+# Seattle Area Incident Avoidance
+
+#### A mobile-friendly Website for general population incident avoidance
+
 This is a UW cross-disciplinary Capstone project sponsored by Challenge Seattle, WSDOT, and King County Metro amongst many other companies and organizations in the public and private sector.
 
 When traffic incidents occur in the Greater Seattle area, our sponsors relay important information through social 
@@ -33,7 +36,7 @@ partnerships, incentives, etc?
     - Behavior change and modeshift behavior reinforcement
 
 ##  Final Clickable Demo 
-[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)  |
+[Demo Webpage](https://annykong.github.io/uwcapstone-modeshift/)(https://annykong.github.io/uwcapstone-modeshift/)  |
 [Demo GitHub Repo](https://github.com/AnnyKong/uwcapstone-modeshift)
 <p float="left">
   <img src="./images/page-1.png" width="140" />
