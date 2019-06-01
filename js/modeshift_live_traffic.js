@@ -83,6 +83,7 @@ function initMap() {
   addLine(flightPlanCoordinates2, map, '#FF0000');
   addCircle(center, 4000, map);
   addMarker(center, map);
+    map.setCenter(center);
 }
 
 var redLines = [
