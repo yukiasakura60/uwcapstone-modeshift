@@ -240,3 +240,5 @@ function addInfoWindow(contentString, marker, map) {
         infowindow.open(map, marker);
     });
 }
+
+$(window).load(initMap);

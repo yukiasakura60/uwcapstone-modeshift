@@ -248,10 +248,3 @@ function fade(i)
         .promise();
   }
 }
-
-// document.getElementById('line-1').style='';
-// document.getElementById('update-1').style='';
-// document.getElementById('update-2').style='';
-
-// window.location =  
-// document.getElementById('se-pre-con').style="display: none;";
